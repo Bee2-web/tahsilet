@@ -10,7 +10,7 @@ export const en: HomeContent = {
       "Tahsilet.AI is an AI collections platform for mid-sized Turkish exporters and manufacturers — wired directly into e-Invoice and designed for KVKK and İYS compliance.",
   },
   brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI home" },
-  contactEmail: "nalbantogluhuseyin@gmail.com",
+  contactEmail: "info@tahsilet.ai",
   announcement: { label: "Our early access program is open — introduce Tahsilet.AI to your business", href: "#contact" },
   nav: {
     label: "Main menu",
@@ -62,7 +62,7 @@ export const en: HomeContent = {
     eyebrow: "AI-powered collections platform",
     title: "Free up your working capital.",
     titleAccent: "Get your receivables paid on time.",
-    body: "Tahsilet.AI is an AI collections platform built for mid-sized Turkish exporters and manufacturers, speaking directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call — in your brand's name, by your rules.",
+    body: "Tahsilet.AI is an AI collections platform built for mid-sized Turkish exporters and manufacturers, connected directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call, in your brand's name and by your rules.",
     secondaryCta: { label: "See How It Works", href: "#how-it-works" },
     emailPlaceholder: "Your work email",
     emailLabel: "Work email address",
@@ -91,16 +91,8 @@ export const en: HomeContent = {
         label: "Roughly one in three businesses in Türkiye name access to finance as their biggest obstacle.",
         source: "Source: World Bank data",
       },
-      {
-        value: "↑",
-        label: "Payment terms keep stretching and pressure on working capital keeps rising — especially for exporters and manufacturers.",
-        source: "Source: Industry observations, 2026",
-      },
-      {
-        value: "0",
-        label: "None of the international competitors we studied are built for Türkiye — e-Invoice, TRY or Turkish ERPs.",
-        source: "Source: Tahsilet.AI competitive research, August 2026",
-      },
+      { value: "40%", label: "More cash flow" },
+      { value: "47%", label: "Reduction in DSO" },
     ],
     callout: "Built for the way Türkiye does business.",
   },
@@ -266,7 +258,7 @@ export const en: HomeContent = {
   integrations: {
     eyebrow: "Integrations",
     title: "Integrated with your ERP and accounting systems",
-    body: "Whatever accounting or ERP software you use, Tahsilet.AI syncs your invoices and collection data in one click — no extra IT project or data migration required.",
+    body: "Whatever accounting or ERP software you use, Tahsilet.AI syncs your invoices and collection data in one click no extra IT project or data migration required.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {

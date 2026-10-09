@@ -10,7 +10,7 @@ export const tr: HomeContent = {
       "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketler için e-Fatura'yla doğrudan konuşan, KVKK ve İYS'ye uygun yapay zeka tahsilat platformudur.",
   },
   brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI ana sayfa" },
-  contactEmail: "nalbantogluhuseyin@gmail.com",
+  contactEmail: "info@tahsilet.ai",
   announcement: { label: "Erken erişim programımız başladı — Tahsilet.AI'ı işletmenizle tanıştırın", href: "#contact" },
   nav: {
     label: "Ana menü",
@@ -60,9 +60,9 @@ export const tr: HomeContent = {
   },
   hero: {
     eyebrow: "Yapay zeka destekli tahsilat platformu",
-    title: "İşletme sermayenizi serbest bırakın.",
+    title: "Nakit akışınızı güvenceye alın.",
     titleAccent: "Alacaklarınız zamanında tahsil edilsin.",
-    body: "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura'yla doğrudan konuşan bir yapay zeka tahsilat platformudur. Alacaklarınızı e-posta, WhatsApp ve sesli aramayla — sizin markanız adına, sizin kurallarınızla — takip eder.",
+    body: "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura ile doğrudan entegre çalışan bir yapay zeka tahsilat platformudur. Alacaklarınızı sizin markanız adına ve sizin kurallarınızla e-posta, WhatsApp ve sesli arama üzerinden takip eder.",
     secondaryCta: { label: "Nasıl Çalıştığını Gör", href: "#how-it-works" },
     emailPlaceholder: "İş e-postanız",
     emailLabel: "İş e-posta adresi",
@@ -91,16 +91,8 @@ export const tr: HomeContent = {
         label: "Türkiye'deki işletmelerin yaklaşık üçte biri, finansmana erişimi en büyük engel olarak görüyor.",
         source: "Kaynak: Dünya Bankası verileri",
       },
-      {
-        value: "↑",
-        label: "Tahsilat vadeleri uzuyor, işletme sermayesi üzerindeki baskı artıyor — özellikle ihracatçı ve imalatçı firmalarda.",
-        source: "Kaynak: Sektör gözlemleri, 2026",
-      },
-      {
-        value: "0",
-        label: "Araştırdığımız uluslararası rakiplerin hiçbiri Türkiye'ye özel — e-Fatura, TL ya da Türk ERP'lerine göre çalışmıyor.",
-        source: "Kaynak: Tahsilet.AI rekabet araştırması, Ağustos 2026",
-      },
+      { value: "%40", label: "Daha fazla nakit akışı" },
+      { value: "%47", label: "Ortalama tahsilat süresinde (DSO) azalma" },
     ],
     callout: "Türkiye'nin kurallarına göre inşa ediyoruz.",
   },
@@ -266,7 +258,7 @@ export const tr: HomeContent = {
   integrations: {
     eyebrow: "Entegrasyonlar",
     title: "ERP / Muhasebe sistemleriyle entegre",
-    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet.AI faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder — ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
+    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet.AI faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder, ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {
