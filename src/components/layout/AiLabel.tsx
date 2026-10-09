@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { aiLinks } from "@/content/home";
+import { aiAssistantHref, aiAssistants, type HomeContent } from "@/content";
 import { ChatGptIcon, ClaudeIcon, GeminiIcon, GrokIcon, PerplexityIcon } from "@/components/icons/AiIcons";
 import styles from "./AiLabel.module.css";
 
 const ICONS = { ChatGPT: ChatGptIcon, Perplexity: PerplexityIcon, Claude: ClaudeIcon, Grok: GrokIcon, Gemini: GeminiIcon };
 
+type Props = { content: Pick<HomeContent, "aiLabel" | "locale"> };
+
 /**
- * Floating "Explore Stuut with AI" pill. Fades in 1.5s after load ("Ai Label Fade IN") and slides
- * out to the right while the footer is in view ("Footer IN/OUT").
+ * Floating "Explore Tahsilet with AI" pill. Fades in 1.5s after load and slides out to the right while
+ * the footer is in view.
  */
-export function AiLabel() {
+export function AiLabel({ content }: Props) {
+  const { aiLabel, locale } = content;
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -30,14 +33,20 @@ export function AiLabel() {
   }, []);
 
   return (
-    <aside className={styles.label} data-hidden={hidden} aria-label="Explore Stuut with AI">
-      <div>Explore Stuut with AI</div>
+    <aside className={styles.label} data-hidden={hidden} aria-label={aiLabel.label}>
+      <div>{aiLabel.label}</div>
       <div className={styles.buttons}>
-        {aiLinks.map(({ name, href }) => {
+        {aiAssistants.map((name) => {
           const Icon = ICONS[name];
           return (
             <div key={name} className={styles.item}>
-              <a href={href} className={styles.button} target="_blank" rel="noopener noreferrer" aria-label={`Ask ${name} about Stuut`}>
+              <a
+                href={aiAssistantHref(name, locale)}
+                className={styles.button}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={aiLabel.ask.replace("{name}", name)}
+              >
                 <Icon />
               </a>
             </div>

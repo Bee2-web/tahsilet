@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { announcement, nav, type NavDropdown as NavDropdownData, type NavLink } from "@/content/home";
-import { Wordmark } from "@/components/icons/Wordmark";
+import type { HomeContent, NavDropdownData, NavItem } from "@/content";
+import { BrandWordmark } from "@/components/icons/BrandWordmark";
 import { BannerArrowIcon } from "@/components/icons/UiIcons";
 import { buttonClass } from "@/components/ui/Button";
 import { gsap, useGSAP } from "@/lib/gsap";
@@ -13,9 +13,12 @@ import { DESKTOP_QUERY, useMediaQuery } from "@/lib/useMediaQuery";
 import { NavDropdown } from "./NavDropdown";
 import styles from "./Header.module.css";
 
-const isDropdown = (item: NavLink | NavDropdownData): item is NavDropdownData => "columns" in item;
+const isDropdown = (item: NavItem): item is NavDropdownData => "columns" in item;
 
-export function Header() {
+type Props = { content: Pick<HomeContent, "announcement" | "nav" | "brand"> };
+
+export function Header({ content }: Props) {
+  const { announcement, nav, brand } = content;
   const rootRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLElement>(null);
   const isDesktop = useMediaQuery(DESKTOP_QUERY, true);
@@ -118,7 +121,7 @@ export function Header() {
       <a href={announcement.href} className={styles.banner} data-collapsed={bannerCollapsed}>
         <span className={styles.bannerClip}>
           <span className={styles.bannerContent}>
-            <span>{announcement.text}</span>
+            <span>{announcement.label}</span>
             <span className={styles.bannerArrow}>
               <BannerArrowIcon width="100%" />
             </span>
@@ -128,9 +131,9 @@ export function Header() {
 
       <div className={styles.navbar} data-solid={navSolid} data-menu-open={menuOpen} role="banner">
         <div className={styles.container}>
-          <Link href="/" className={styles.brand} aria-label="Stuut home" style={{ opacity: menuOpen ? 0 : 1 }}>
+          <Link href="#hero" className={styles.brand} aria-label={brand.homeLabel} style={{ opacity: menuOpen ? 0 : 1 }}>
             <span className={styles.logo}>
-              <Wordmark />
+              <BrandWordmark name={brand.name} suffix={brand.suffix} label={brand.homeLabel} />
             </span>
           </Link>
 
@@ -138,14 +141,14 @@ export function Header() {
             ref={menuRef}
             className={styles.navMenu}
             data-open={menuMounted}
-            aria-label="Main"
+            aria-label={nav.label}
             id="main-menu"
           >
             <div className={styles.ddOverlay} data-visible={isDesktop && openDropdown !== null} />
             <div className={styles.navScrollWrap}>
-              <Link href="/" className={styles.mobileBrand} aria-label="Stuut home">
+              <Link href="#hero" className={styles.mobileBrand} aria-label={brand.homeLabel} onClick={() => setMenuOpen(false)}>
                 <span className={styles.logo}>
-                  <Wordmark />
+                  <BrandWordmark name={brand.name} suffix={brand.suffix} label={brand.homeLabel} />
                 </span>
               </Link>
               <div className={styles.navLinks}>
@@ -155,25 +158,31 @@ export function Header() {
                       key={item.label}
                       data={item}
                       hoverEnabled={isDesktop}
+                      onNavigate={() => setMenuOpen(false)}
                       open={openDropdown === item.label}
                       onOpenChange={(open) =>
                         setOpenDropdown((current) => (open ? item.label : current === item.label ? null : current))
                       }
                     />
                   ) : (
-                    <a key={item.label} href={item.href} className={styles.navlink}>
+                    <a key={item.label} href={item.href} className={styles.navlink} onClick={() => setMenuOpen(false)}>
                       <span>{item.label}</span>
                     </a>
                   ),
                 )}
               </div>
               <div className={styles.ctaDiv}>
-                <a href={nav.demo.href} className={buttonClass("yellow", "nav")}>
+                <a href={nav.demo.href} className={buttonClass("yellow", "nav")} onClick={() => setMenuOpen(false)}>
                   {nav.demo.label}
                 </a>
-                <a href={nav.login.href} className={buttonClass("blue", "nav")}>
-                  {nav.login.label}
-                </a>
+                <Link
+                  href={nav.languageSwitch.href}
+                  className={buttonClass("blue", "nav", styles.langSwitch)}
+                  aria-label={nav.languageSwitch.ariaLabel}
+                  hrefLang={nav.languageSwitch.href.slice(1)}
+                >
+                  {nav.languageSwitch.label}
+                </Link>
               </div>
             </div>
           </nav>
@@ -181,7 +190,7 @@ export function Header() {
           <button
             type="button"
             className={styles.menuButton}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? nav.closeMenu : nav.openMenu}
             aria-expanded={menuOpen}
             aria-controls="main-menu"
             onClick={toggleMenu}

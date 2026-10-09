@@ -1,0 +1,90 @@
+.section {
+  background-color: var(--color-paper);
+}
+
+.eyebrow {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.wrap {
+  margin-top: var(--gutter-s);
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  gap: 1rem;
+  grid-template-columns: repeat(5, minmax(0, 15rem));
+  justify-content: center;
+  width: 100%;
+  display: grid;
+}
+
+.item {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  aspect-ratio: 735 / 340;
+  border: var(--line-2) solid var(--color-blue);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-white);
+  display: grid;
+  place-items: center;
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--color-orange);
+  transform: translateY(-2px);
+}
+
+/* Logo safe area inside the card; each logo is contained, so wide and tall marks balance out. */
+.logo {
+  position: relative;
+  width: 78%;
+  height: 62%;
+  transform: scale(var(--logo-scale, 1));
+}
+
+.logoImg {
+  object-fit: contain;
+}
+
+@media (max-width: 1160px) {
+  .list {
+    grid-template-columns: repeat(3, minmax(0, 15rem));
+  }
+}
+
+@media (max-width: 767px) {
+  /* Two per row; an odd last card is centred. */
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item {
+    width: calc(50% - 0.5rem);
+  }
+
+  .logo {
+    width: 80%;
+    height: 58%;
+  }
+}

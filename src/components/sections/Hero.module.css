@@ -1,6 +1,7 @@
 .hero {
   z-index: 3;
-  background-color: var(--color-grey);
+  background-color: var(--color-paper);
+  overflow: hidden;
   flex-flow: row;
   min-height: 52rem;
 }
@@ -10,7 +11,7 @@
   height: 100%;
   min-height: 100svh;
   padding-top: 6rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
 }
 
 /* ---------- Wordmark ---------- */
@@ -19,24 +20,111 @@
   justify-content: center;
   align-items: stretch;
   width: 100%;
-  min-height: 30svh;
   display: flex;
   animation:
     hero-rise 1s var(--ease-out-quart) both,
     hero-tilt-logo 1s var(--ease-out-cubic) both;
 }
 
+/* Wordmark spans ~4/5 of the row, leaving the top-right corner to the hairline arcs. */
 .logo {
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 80%;
   display: flex;
 }
 
-.logo svg {
-  width: 100%;
+.logo {
+  color: var(--color-blue);
+}
+
+/* fullseam-style hairline geometry in the top-right corner */
+.arcs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(56vw, 52rem);
   height: auto;
+  fill: none;
+  stroke: var(--hair-strong);
+  stroke-width: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.arcs line {
+  stroke: rgb(244 123 32 / 0.45);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--hair-strong);
+  background: rgb(255 255 255 / 0.55);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem 0.45rem 0.75rem;
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chipMark {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 1px;
+  background: var(--color-orange);
+  flex: none;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+/* Second voice of the headline: elegant serif accent (fullseam) under the Hn display (Stuut). */
+.titleAccent {
   display: block;
+  font-family: var(--font-quadrant);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  font-size: 0.7em;
+  margin-top: 0.15em;
+}
+
+.badges {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.check {
+  display: inline-grid;
+  place-items: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 3px;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 0.65rem;
 }
 
 /* ---------- Copy column ---------- */
@@ -52,8 +140,6 @@
   align-items: flex-start;
   display: flex;
   position: relative;
-  /* The reference's zero-height embed row adds one extra gap under the form. */
-  padding-bottom: var(--gutter-s);
 }
 
 .titleWrap {
@@ -62,7 +148,11 @@
 }
 
 .body {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.body p {
+  max-width: 40rem;
 }
 
 .videoRow {
@@ -72,6 +162,7 @@
 
 .textButton {
   z-index: 12;
+  display: inline-block;
   border: 0;
   border-bottom: var(--line-1) solid var(--color-blue);
   color: var(--color-blue);
@@ -204,8 +295,12 @@
 }
 
 @media (max-width: 991px) {
-  .logoDiv {
-    min-height: auto;
+  .logo {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 3.1rem;
   }
 
   .copy {
@@ -228,6 +323,14 @@
 @media (max-width: 767px) {
   .padding {
     padding-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .arcs {
+    width: 90vw;
   }
 
   .textButton {
@@ -253,9 +356,12 @@
 }
 
 @media (max-width: 479px) {
-  /* Reference h1 also carries .h-large, which adds .25em (of 1.7rem) bottom padding here. */
-  .titleWrap h1 {
-    padding-bottom: 0.425rem;
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .chip {
+    font-size: 0.68rem;
   }
 
   .mascot {

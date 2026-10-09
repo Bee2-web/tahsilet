@@ -44,13 +44,3 @@ export function ArrowRightIcon(props: IconProps) {
     </svg>
   );
 }
-
-/** Close cross used on the mobile capability cards. */
-export function CardCloseIcon(props: IconProps) {
-  return (
-    <svg viewBox="0 0 14 14" {...base} {...props}>
-      <line x1="0.46394" y1="12.689" x2="12.6889" y2="0.464037" stroke="currentColor" strokeWidth="1.3125" />
-      <path d="M0.618652 0.470459L12.8437 12.6955" stroke="currentColor" strokeWidth="1.3125" />
-    </svg>
-  );
-}

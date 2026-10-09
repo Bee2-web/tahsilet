@@ -7,7 +7,7 @@
 .padding {
   width: 100%;
   flex: 1;
-  padding: 2rem var(--page-margin);
+  padding: 4rem var(--page-margin) 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,98 +17,89 @@
 .container {
   z-index: 10;
   width: 100%;
-  gap: var(--gutter-s);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 3rem;
   position: relative;
 }
 
-.navDiv {
-  gap: 0.5rem 1.5rem;
-  flex-flow: wrap;
-  flex: 1;
-  margin-right: 3rem;
+.about {
   display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.tagline {
+  margin: 0;
+  max-width: 26rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.mail {
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.4);
+}
+
+.mail:hover {
+  color: var(--color-yellow);
+  border-bottom-color: var(--color-yellow);
+}
+
+.navDiv {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
 }
 
 .row {
-  gap: 1.5rem;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.columnTitle {
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.6);
+  padding-bottom: 0.25rem;
 }
 
 .link {
   color: var(--color-white);
-  letter-spacing: -0.01rem;
-  white-space: nowrap;
   border-bottom: 1px solid transparent;
-  justify-content: center;
-  align-items: center;
-  padding: 0.35rem 0 0.2rem;
+  padding: 0.1rem 0;
   font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1;
+  line-height: 1.2;
   transition: border-color 0.25s ease;
-  display: flex;
-  position: relative;
 }
 
 .link:hover {
   border-bottom-color: var(--color-white);
 }
 
-.socials {
-  gap: 0.4rem;
+.logoLink {
+  grid-column: 1 / -1;
   width: 100%;
-  padding-top: 2rem;
-  display: flex;
-}
-
-.social {
-  aspect-ratio: 1;
-  border: 1px solid var(--color-light-blue);
-  width: 2rem;
-  color: var(--color-yellow);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  padding: 0.1rem;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-
-.social img {
-  width: 100%;
-  height: 100%;
-}
-
-.social:hover {
-  border-color: var(--color-lighter-blue);
-  animation: social-press 0.25s ease;
-}
-
-@keyframes social-press {
-  from {
-    scale: 0.97;
-  }
-  to {
-    scale: 1;
-  }
+  margin-top: 4rem;
+  color: var(--color-white);
+  display: block;
 }
 
 .copyright {
-  flex-flow: row-reverse;
-  justify-content: flex-end;
-  width: 100%;
+  grid-column: 1 / -1;
   display: flex;
-}
-
-/* Two-class selector, as on the reference, so the breakpoint paddings below don't override it. */
-.copyright.year {
-  width: auto;
-  padding-top: 0.25rem;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--hair-light);
 }
 
 .copyrightTxt {
@@ -118,19 +109,6 @@
 .small {
   letter-spacing: 0.01rem;
   font-size: 0.85rem;
-}
-
-.logoLink {
-  width: 100%;
-  margin-top: 5rem;
-  color: var(--color-white);
-  display: block;
-}
-
-.logoLink svg {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .lottie {
@@ -145,46 +123,15 @@
   bottom: 0;
 }
 
-/* Webflow leaves Lottie SVGs inline (baseline gap below); Tailwind preflight would make them block. */
+/* Webflow-style inline Lottie SVG keeps a small baseline gap. */
 .lottie svg {
   display: inline;
   vertical-align: baseline;
 }
 
 @media (max-width: 991px) {
-  .navDiv {
-    row-gap: 1rem;
-    margin-right: 0;
-  }
-
-  .link {
-    padding: 0;
-    font-size: 1rem;
-  }
-
-  .link:hover {
-    border-bottom-color: transparent;
-  }
-
-  .copyright {
-    gap: 1rem;
-    flex-flow: column-reverse;
-    order: 9999;
-    width: 100%;
-    padding-top: 0.5rem;
-  }
-
-  .logoLink {
-    margin-bottom: 2rem;
-  }
-
-  .copyrightTxt,
-  .small {
-    font-size: 0.75rem;
-  }
-
-  .socials {
-    padding-top: 1.25rem;
+  .container {
+    grid-template-columns: 1fr;
   }
 
   .lottie {
@@ -194,24 +141,25 @@
 }
 
 @media (max-width: 767px) {
-  .row {
-    gap: 0.75rem;
-    flex-flow: column;
-    flex: 1;
-    justify-content: flex-start;
-    align-items: flex-start;
+  .padding {
+    padding-top: 3rem;
   }
 
-  .socials {
-    padding-top: 2rem;
+  .navDiv {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .logoLink {
+    margin-top: 2.5rem;
   }
 
   .copyright {
-    padding-top: 1rem;
-  }
-
-  .social {
-    width: 1.8rem;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
   .lottie {
@@ -221,12 +169,7 @@
 }
 
 @media (max-width: 479px) {
-  .link {
-    font-size: 0.9rem;
-  }
-
-  .copyrightTxt,
   .small {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 }

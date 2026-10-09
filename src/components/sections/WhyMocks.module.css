@@ -1,0 +1,446 @@
+/* Product-UI mock cards (fullseam-inspired), shown inside the blue-bordered media frames. */
+.card {
+  width: min(88%, 30rem);
+  background: var(--color-white);
+  color: var(--color-ink);
+  border-radius: 0.9rem;
+  border: 1px solid rgb(22 101 181 / 0.14);
+  box-shadow:
+    0 1px 0 rgb(22 101 181 / 0.05),
+    0 24px 48px -28px rgb(12 52 99 / 0.45);
+  padding: 1.1rem;
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.cardHeader,
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.cardMeta {
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+  letter-spacing: 0.02em;
+}
+
+.appIcon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.55rem;
+  background: var(--color-blue);
+  color: var(--color-yellow);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.appIcon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.sync {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid rgb(22 101 181 / 0.2);
+  border-top-color: var(--color-orange);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  height: 3px;
+  margin: 0.9rem 0 0.4rem;
+  border-radius: 3px;
+  background: var(--color-blue-tint);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
+  border-radius: inherit;
+  animation: load 2.4s var(--ease-in-out-cubic) infinite;
+}
+
+@keyframes load {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-line-soft);
+  animation: row-in 0.6s var(--ease-out-cubic) both;
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.company {
+  font-weight: 700;
+  color: var(--color-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.invoice {
+  font-size: 0.72rem;
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  white-space: nowrap;
+}
+
+/* Status pills in the brand palette: blue = paid, yellow = due, orange = overdue. */
+.status[data-tone="ok"] {
+  background: var(--color-blue-tint);
+  color: var(--color-blue);
+}
+
+.status[data-tone="due"] {
+  background: var(--color-yellow);
+  color: var(--color-navy);
+}
+
+.status[data-tone="late"] {
+  background: var(--color-orange-soft);
+  color: var(--color-orange-deep);
+}
+
+/* ---------- WhatsApp ---------- */
+.chat {
+  padding: 0;
+  overflow: hidden;
+  background: var(--color-paper);
+}
+
+.chatHeader {
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 0.75rem 1rem;
+}
+
+.chatHeader .cardTitle {
+  color: var(--color-white);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  color: var(--color-blue);
+  font-weight: 800;
+  font-size: 0.8rem;
+  flex: none;
+}
+
+.online {
+  font-size: 0.72rem;
+  color: rgb(255 255 255 / 0.75);
+}
+
+.waMark {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--color-yellow);
+  flex: none;
+}
+
+.thread {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1rem;
+  min-height: 13rem;
+}
+
+.bubble {
+  position: relative;
+  max-width: 85%;
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.7rem 1.3rem;
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--color-ink);
+  box-shadow: 0 1px 0 rgb(12 52 99 / 0.1);
+}
+
+.out {
+  align-self: flex-end;
+  background: var(--color-yellow-soft);
+  border-top-right-radius: 0.15rem;
+  animation: chat-out 8s var(--ease-out-cubic) infinite;
+}
+
+.in {
+  align-self: flex-start;
+  background: var(--color-white);
+  border-top-left-radius: 0.15rem;
+  animation: chat-in 8s var(--ease-out-cubic) infinite;
+}
+
+.meta {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.3rem;
+  font-size: 0.62rem;
+  color: var(--color-ink-muted);
+}
+
+.ticks {
+  color: var(--color-blue);
+  letter-spacing: -0.15em;
+}
+
+.typing {
+  align-self: flex-start;
+  display: flex;
+  gap: 0.25rem;
+  background: var(--color-white);
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  animation: typing 8s linear infinite;
+}
+
+.typing span {
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--color-ink-muted);
+  animation: dot 1s ease-in-out infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes dot {
+  50% {
+    transform: translateY(-3px);
+    opacity: 0.5;
+  }
+}
+
+/* One 8s loop: message sent → customer typing → reply arrives → hold → reset. */
+@keyframes chat-out {
+  0%,
+  4% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  10%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  0%,
+  22% {
+    opacity: 0;
+    height: 0;
+    padding-block: 0;
+  }
+  26%,
+  44% {
+    opacity: 1;
+    height: auto;
+    padding-block: 0.6rem;
+  }
+  48%,
+  100% {
+    opacity: 0;
+    height: 0;
+    padding-block: 0;
+  }
+}
+
+@keyframes chat-in {
+  0%,
+  46% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  52%,
+  92% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Voice ---------- */
+.callIcon {
+  background: var(--color-orange);
+  color: var(--color-white);
+}
+
+.callStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-orange-deep);
+  background: var(--color-orange-soft);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  white-space: nowrap;
+}
+
+.recDot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--color-orange);
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.wave {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 3.2rem;
+  margin: 1rem 0 0.75rem;
+  padding: 0 0.25rem;
+  border-radius: 0.6rem;
+  background: var(--color-blue-tint);
+}
+
+.wave span {
+  flex: 1;
+  height: 30%;
+  border-radius: 2px;
+  background: var(--color-blue);
+  animation: wave 0.9s ease-in-out infinite alternate;
+}
+
+.wave span:nth-child(3n) {
+  background: var(--color-light-blue);
+}
+
+.wave span:nth-child(7n) {
+  background: var(--color-orange);
+}
+
+@keyframes wave {
+  to {
+    height: 85%;
+  }
+}
+
+.transcript {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--color-ink);
+}
+
+.transcript li {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.handoff {
+  margin-top: 0.9rem;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--color-yellow);
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .out,
+  .in {
+    animation: none;
+  }
+
+  .typing {
+    display: none;
+  }
+}

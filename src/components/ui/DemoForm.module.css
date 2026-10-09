@@ -1,7 +1,7 @@
 .demoForm {
   width: 100%;
   margin-bottom: 0;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .content {
@@ -53,12 +53,15 @@
   cursor: progress;
 }
 
-.error {
-  color: var(--color-red);
+.notice {
   margin: 0.75rem 0 0;
-  font-size: 16px;
-  line-height: 148%;
   max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.notice a {
+  border-bottom: 1px solid currentColor;
 }
 
 @media (max-width: 991px) {

@@ -1,0 +1,51 @@
+import { en } from "./en";
+import { tr } from "./tr";
+import type { HomeContent, Locale } from "./types";
+
+export * from "./types";
+export { referenceCompanies } from "./references";
+
+const dictionaries: Record<Locale, HomeContent> = { tr, en };
+
+export const getContent = (locale: Locale): HomeContent => dictionaries[locale];
+
+export const SITE_URL = "https://tahsilet.ai";
+
+
+/** Mascot animations (kept from the original design system). */
+export const lottie = {
+  heroLoad: "/assets/lottie/jumping-loop.json",
+  heroTalk: "/assets/lottie/talk-loop.json",
+  eat: "/assets/lottie/stuut-eat.json",
+  footer: "/assets/lottie/pop-up-loop.json",
+};
+
+export const aiAssistants = ["ChatGPT", "Perplexity", "Claude", "Grok", "Gemini"] as const;
+
+export function aiAssistantHref(name: (typeof aiAssistants)[number], locale: Locale) {
+  const prompt = encodeURIComponent(
+    locale === "tr"
+      ? `${SITE_URL}/ adresindeki Tahsilet.AI'ı özetle ve temel noktalarını analiz et`
+      : `Summarize and analyze the key insights from ${SITE_URL}/`,
+  );
+  switch (name) {
+    case "ChatGPT":
+      return `https://chatgpt.com/?q=${prompt}`;
+    case "Perplexity":
+      return `https://www.perplexity.ai/search/new?q=${prompt}`;
+    case "Claude":
+      return `https://claude.ai/new?q=${prompt}`;
+    case "Grok":
+      return `https://x.com/i/grok?text=${prompt}`;
+    case "Gemini":
+      return `https://gemini.google.com/app?q=${prompt}`;
+  }
+}
+
+export function mailtoHref(content: Pick<HomeContent, "contactEmail" | "locale">, from?: string) {
+  const subject = encodeURIComponent(content.locale === "tr" ? "Tahsilet.AI - Demo Talebi" : "Tahsilet.AI - Demo Request");
+  const body = from
+    ? encodeURIComponent(content.locale === "tr" ? `Merhaba, demo talep ediyorum. İletişim: ${from}` : `Hello, I'd like a demo. Contact: ${from}`)
+    : "";
+  return `mailto:${content.contactEmail}?subject=${subject}${body ? `&body=${body}` : ""}`;
+}
