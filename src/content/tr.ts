@@ -10,7 +10,7 @@ export const tr: HomeContent = {
       "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketler için e-Fatura'yla doğrudan konuşan, KVKK ve İYS'ye uygun yapay zeka tahsilat platformudur.",
   },
   brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI ana sayfa" },
-  contactEmail: "nalbantogluhuseyin@gmail.com",
+  contactEmail: "info@tahsilet.ai",
   announcement: { label: "Erken erişim programımız başladı — Tahsilet.AI'ı işletmenizle tanıştırın", href: "#contact" },
   nav: {
     label: "Ana menü",

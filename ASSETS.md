@@ -144,8 +144,6 @@ header logo from apesan.co with its wordmark recoloured dark (#1d1d1b) for light
 
 | Local file | Source |
 |---|---|
-| `public/assets/logos/references/nalbantoglu-metal.svg` | https://nalbantal.com/wp-content/uploads/2025/02/NalbantogluLogo.svg (nalbantoglu.eu → nalbantal.com) |
 | `public/assets/logos/references/apesan.svg` | inline SVG logo on https://apesan.co/ |
 | `public/assets/logos/references/teknik-mukavva.png` | https://teknikmukavva.com/img/tklogo.png |
-| `public/assets/logos/references/ozkuruslar.png` | https://www.ozkuruslar.com.tr/Upload/images/ozk_logo2_300dpi_24201918827423.png |
 | `public/assets/logos/references/newinn.png` | https://newinn.com/wp-content/uploads/2023/06/newinn-header-logo.png |

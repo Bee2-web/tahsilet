@@ -10,7 +10,7 @@ export const en: HomeContent = {
       "Tahsilet.AI is an AI collections platform for mid-sized Turkish exporters and manufacturers — wired directly into e-Invoice and designed for KVKK and İYS compliance.",
   },
   brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI home" },
-  contactEmail: "nalbantogluhuseyin@gmail.com",
+  contactEmail: "info@tahsilet.ai",
   announcement: { label: "Our early access program is open — introduce Tahsilet.AI to your business", href: "#contact" },
   nav: {
     label: "Main menu",
