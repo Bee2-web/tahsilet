@@ -1,0 +1,462 @@
+.navbarDiv {
+  z-index: 900;
+  pointer-events: none;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  inset: 0 0 auto;
+}
+
+/* ---------- Announcement banner ---------- */
+.banner {
+  z-index: 2;
+  width: 100%;
+  padding: 0 var(--page-margin);
+  pointer-events: auto;
+  color: #fff;
+  text-align: center;
+  text-wrap: balance;
+  background-color: var(--color-red);
+  font-family: var(--font-hn);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.2;
+  display: grid;
+  grid-template-rows: 1fr;
+  position: relative;
+  transition:
+    background-color 0.25s ease,
+    grid-template-rows 0.3s var(--ease-out-cubic);
+}
+
+.banner:hover {
+  background-color: var(--color-red-hover);
+}
+
+.banner[data-collapsed="true"] {
+  grid-template-rows: 0fr;
+  transition:
+    background-color 0.25s ease,
+    grid-template-rows 0.3s var(--ease-in-out-quad);
+}
+
+.bannerClip {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerContent {
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 0;
+  display: flex;
+  transition: opacity 0.3s ease;
+}
+
+.banner[data-collapsed="true"] .bannerContent {
+  opacity: 0;
+}
+
+.bannerArrow {
+  width: 0.8rem;
+  flex: none;
+  display: flex;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  width: 100%;
+  padding: 0.85rem var(--page-margin);
+  border-bottom: var(--line-1) solid rgb(22 101 181 / 0);
+  pointer-events: auto;
+  background-color: rgb(255 255 255 / 0);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar[data-solid="true"] {
+  background-color: #fff;
+  border-bottom-color: var(--color-blue);
+}
+
+.container {
+  z-index: 10;
+  width: 100%;
+  gap: var(--gutter-s);
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.brand {
+  z-index: 0;
+  pointer-events: auto;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 17.5svw;
+  max-width: 19rem;
+  margin-bottom: -0.3rem;
+  display: flex;
+  position: relative;
+  color: var(--color-blue);
+  transform: translateY(-8rem);
+  transition:
+    transform 0.4s var(--ease-ease-in-out),
+    opacity 0.3s ease;
+}
+
+.navbar[data-solid="true"] .brand {
+  transform: translateY(0);
+  transition:
+    transform 0.5s var(--ease-out-cubic),
+    opacity 0.3s ease;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+}
+
+.logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.navMenu {
+  z-index: 20;
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+
+.ddOverlay {
+  opacity: 0;
+  pointer-events: none;
+  background-color: #1665b580;
+  width: 100%;
+  height: 120vh;
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ddOverlay[data-visible="true"] {
+  opacity: 1;
+}
+
+.navScrollWrap {
+  flex: 1;
+  justify-content: space-between;
+  align-items: stretch;
+  display: flex;
+}
+
+.mobileBrand {
+  display: none;
+}
+
+.navLinks {
+  gap: 1.35rem;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0.25rem;
+  padding-right: 1.5rem;
+  display: flex;
+}
+
+.navlink {
+  color: var(--color-blue);
+  letter-spacing: -0.01rem;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem 0 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: border-color 0.25s ease;
+  display: flex;
+  position: relative;
+  background: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-family: inherit;
+}
+
+.navlink:hover {
+  border-bottom-color: var(--color-blue);
+}
+
+.ctaDiv {
+  gap: 0.25rem;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+}
+
+/* ---------- Menu button (tablet/mobile) ---------- */
+.menuButton {
+  z-index: 60;
+  pointer-events: auto;
+  background-color: transparent;
+  border: 0;
+  flex: none;
+  padding: 0.5em 0;
+  font-size: 24px;
+  display: none;
+  position: relative;
+}
+
+.menuIconWrap {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2rem;
+  display: flex;
+}
+
+.menuLine {
+  z-index: 10;
+  background-color: var(--color-blue);
+  border-radius: 900rem;
+  width: 100%;
+  height: 2px;
+  margin: 0.15em 0;
+  position: relative;
+}
+
+.mobileOverlay {
+  z-index: 2;
+  background-color: var(--color-blue);
+  opacity: 0;
+  width: 100%;
+  height: 120%;
+  display: none;
+  position: fixed;
+  inset: 0;
+}
+
+@media (max-width: 991px) {
+  .banner {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .banner:hover {
+    background-color: var(--color-red);
+  }
+
+  .bannerContent {
+    gap: 0.6rem;
+  }
+
+  .bannerArrow {
+    width: 0.72rem;
+  }
+
+  .navbar {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .brand {
+    z-index: 1;
+  }
+
+  .logo {
+    width: 12.5rem;
+  }
+
+  .menuButton {
+    margin-left: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+  }
+
+  .navMenu {
+    z-index: 9;
+    background-color: var(--color-yellow);
+    flex: 0 auto;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    text-align: center;
+    display: none;
+  }
+
+  .navMenu[data-open="true"] {
+    display: block;
+  }
+
+  .ddOverlay {
+    display: none;
+  }
+
+  .navScrollWrap {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100dvh;
+    padding: 2rem 2rem 8rem;
+    overflow-y: auto;
+  }
+
+  .mobileBrand {
+    margin-bottom: auto;
+    margin-left: var(--page-margin);
+    display: flex;
+    color: var(--color-blue);
+  }
+
+  .mobileBrand .logo {
+    width: 55svw;
+  }
+
+  .navLinks {
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    padding-top: 2rem;
+    padding-right: 0;
+  }
+
+  .navlink {
+    padding: 0.75rem 0 0.75rem var(--page-margin);
+    border-bottom-color: var(--color-blue);
+    justify-content: space-between;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .ctaDiv {
+    z-index: 3;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-right: 3rem;
+    font-size: 0.8rem;
+  }
+
+  .bannerClip {
+    justify-content: flex-start;
+  }
+
+  .bannerContent {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .bannerArrow {
+    margin: 0.56rem 0.5rem 0.5rem;
+    position: absolute;
+    inset: 0 0 auto auto;
+    transform: rotate(-45deg);
+  }
+
+  .brand {
+    margin-bottom: -0.2rem;
+  }
+
+  .logo {
+    width: 11.5rem;
+  }
+
+  .navScrollWrap {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .mobileBrand .logo {
+    width: 62svw;
+  }
+
+  .navlink {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .banner {
+    padding-right: 2rem;
+  }
+
+  .bannerArrow {
+    width: 0.7rem;
+  }
+
+  .navScrollWrap {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .navLinks {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .mobileBrand .logo {
+    width: 68svw;
+  }
+
+  .navlink {
+    font-size: 1.3rem;
+  }
+
+  .ctaDiv {
+    max-width: none;
+  }
+}
+
+.menuLine {
+  transition: transform 0.7s var(--ease-menu);
+}
+
+.menuIconWrap[data-open="true"] .menuLine:first-child {
+  transform: translateY(0.3rem) rotate(45deg);
+}
+
+.menuIconWrap[data-open="true"] .menuLine:last-child {
+  transform: translateY(-0.3rem) rotate(-45deg);
+}

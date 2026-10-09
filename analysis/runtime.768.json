@@ -1,0 +1,123 @@
+{
+  "scrollTriggers": [
+    {
+      "trigger": "logos-list w-dyn-items",
+      "start": 406,
+      "end": 1627,
+      "pin": false,
+      "pinTarget": null,
+      "scrub": false,
+      "toggleActions": "play none none none",
+      "startVar": "clamp(top 96%)",
+      "endVar": "clamp(bottom top)",
+      "once": false,
+      "anim": null
+    },
+    {
+      "trigger": "logos-list is-5-columns w-dyn-items",
+      "start": 7087,
+      "end": 8406,
+      "pin": false,
+      "pinTarget": null,
+      "scrub": false,
+      "toggleActions": "play none none none",
+      "startVar": "clamp(top 96%)",
+      "endVar": "clamp(bottom top)",
+      "once": false,
+      "anim": null
+    }
+  ],
+  "globalTweens": [
+    {
+      "type": "Tween",
+      "duration": 0,
+      "delay": 0.2,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "targets": [
+        "function _refreshAll(e,t){if(qe=Ue.documentElement,He=Ue.body,l=[Je,Ue,qe,He],!st||e||T){$b(),rt=ne.isRefreshing=!0,T||Tb();var r=V(\"refreshInit\");Qe&&ne.sort(),t||Ub(),Ie.forEach(function(e){Ua(e)&&(e.smooth&&(e.target.style.scrollBehavior=\"auto\"),e(0))}),Tt.slice(0).forEach(function(e){return e.refresh()}),T=!1,Tt.forEach(function(e){if(e._subPinOffset&&e.pin){var t=e.vars.horizontal?\"offsetWidth\":\"offsetHeight\",r=e.pin[t];e.revert(!0,1),e.adjustPinSpacing(e.pin[t]-r),e.refresh()}}),et=1,_b(!0),Tt.forEach(function(e){var t=Ra(e.scroller,e._dir),r=\"max\"===e.vars.end||e._endClamp&&e.end>t,n=e._startClamp&&e.start>=t;(r||n)&&e.setPositions(n?t-1:e.start,r?Math.max(n?t:e.start+1,t):e.end,!0)}),_b(!1),et=0,r.forEach(function(e){return e&&e.render&&e.render(-1)}),Ie.forEach(function(e){Ua(e)&&(e.smooth&&requestAnimationFrame(function(){return e.target.style.scrollBehavior=\"smooth\"}),e.rec&&e(e.rec))}),Vb(_,1),c.pause(),Mt++,$(rt=2),Tt.forEach(function(e){return Ua(e.vars.onRefresh)&&e.vars.onRefresh(e)}),rt=ne.isRefreshing=!1,V(\"refresh\")}else xb(ne,\"scrollEnd\",Pb)}"
+      ],
+      "vars": "{\"immediateRender\":false,\"lazy\":false,\"overwrite\":false,\"delay\":0.2,\"onComplete\":\"fn\",\"onReverseComplete\":\"fn\",\"duration\":0,\"ease\":\"fn\"}"
+    },
+    {
+      "type": "Timeline",
+      "duration": 0.6,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": null,
+      "targets": [],
+      "vars": "{\"paused\":true}"
+    },
+    {
+      "type": "Tween",
+      "duration": 0,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": "function(t){return 1-Math.pow(1-t,r)}",
+      "targets": [
+        "SECTION.youtube-popup"
+      ],
+      "vars": "{\"display\":\"flex\",\"duration\":0,\"overwrite\":false,\"delay\":0,\"ease\":\"fn\",\"repeat\":0,\"immediateRender\":false}"
+    },
+    {
+      "type": "Tween",
+      "duration": 0.3,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": "power2.out",
+      "targets": [
+        "SECTION.youtube-popup"
+      ],
+      "vars": "{\"opacity\":1,\"duration\":0.3,\"ease\":\"power2.out\",\"overwrite\":false,\"delay\":0}"
+    },
+    {
+      "type": "Tween",
+      "duration": 0.3,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": "power2.out",
+      "targets": [
+        "SECTION.youtube-popup"
+      ],
+      "vars": "{\"opacity\":1,\"duration\":0.3,\"ease\":\"power2.out\",\"overwrite\":false,\"delay\":0}"
+    },
+    {
+      "type": "Tween",
+      "duration": 0.5,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": "back.out(1.7)",
+      "targets": [
+        "DIV.youtube-video-wrapper"
+      ],
+      "vars": "{\"scale\":1,\"opacity\":1,\"duration\":0.5,\"ease\":\"back.out(1.7)\",\"overwrite\":false,\"delay\":0}"
+    },
+    {
+      "type": "Timeline",
+      "duration": 0,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": null,
+      "targets": [],
+      "vars": "{\"paused\":true,\"reversed\":false,\"data\":{\"id\":\"t-10057a81\"}}"
+    },
+    {
+      "type": "Timeline",
+      "duration": 0,
+      "delay": 0,
+      "repeat": 0,
+      "yoyo": false,
+      "ease": null,
+      "targets": [],
+      "vars": "{\"paused\":true,\"reversed\":false,\"data\":{\"id\":\"t-f82abc38\"}}"
+    }
+  ],
+  "lenis": true
+}

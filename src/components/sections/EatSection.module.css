@@ -1,0 +1,41 @@
+.section {
+  background-color: var(--color-yellow);
+  overflow: hidden;
+}
+
+.lottieDiv {
+  padding-top: 6rem;
+}
+
+.lottie {
+  width: 100%;
+  max-width: 92rem;
+  margin-bottom: -0.7rem;
+}
+
+/* Webflow leaves Lottie SVGs inline (baseline gap below); Tailwind preflight would make them block. */
+.lottie svg {
+  display: inline;
+  vertical-align: baseline;
+}
+
+@media (max-width: 991px) {
+  .lottie {
+    margin-bottom: -0.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .lottie {
+    width: 150%;
+    max-width: none;
+    margin-bottom: -0.3rem;
+    margin-left: -50%;
+  }
+}
+
+@media (max-width: 479px) {
+  .lottie {
+    margin-bottom: -0.2rem;
+  }
+}

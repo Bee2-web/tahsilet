@@ -1,26 +1,244 @@
 @import "tailwindcss";
+@import "../styles/tokens.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ---------- Base (mirrors the reference's Webflow base styles) ---------- */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    height: auto;
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  body {
+    margin: 0;
+    min-height: 100%;
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    cursor: default;
+    text-wrap: pretty;
+    font-family: var(--font-quadrant);
+    /* em-based sizes (stats, capability pills, quote cards) scale with this. */
+    font-size: 1vw;
+    line-height: 1.25;
+    overscroll-behavior: none;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (min-width: 992px) and (max-width: 1400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    body {
+      font-size: 16px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    font-family: var(--font-hn);
+    font-weight: 800;
+    text-wrap: balance;
+  }
+
+  h1 {
+    letter-spacing: -0.02rem;
+    font-size: 3.75rem;
+    line-height: 1.02;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  p {
+    margin: 0 0 0.5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-light-blue);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 479px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Shared primitives live in a layer so component CSS modules always override them. */
+@layer components {
+  /* ---------- Shared layout primitives ---------- */
+  .section {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+  }
+
+  .section-padding {
+    width: 100%;
+    padding: 8rem var(--page-margin);
+    gap: var(--gutter-s);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .page-container {
+    z-index: 10;
+    width: 100%;
+    max-width: var(--container-max);
+    gap: var(--gutter-s);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .container-center-text {
+    padding-bottom: var(--gutter-l);
+    text-wrap: balance;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .bg-blue-grid {
+    color: var(--color-white);
+    background-image: linear-gradient(0deg, #1665b573, #2f85db33), var(--grid-bg),
+      linear-gradient(0deg, var(--color-blue), var(--color-light-blue));
+    background-position: 0 0, 50%, 0 0;
+    background-size: auto, 2.9rem, auto;
+    background-attachment: scroll, fixed, scroll;
+  }
+
+  .h-x-large {
+    letter-spacing: -0.02rem;
+    text-wrap: balance;
+    font-family: var(--font-hn);
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.02;
+  }
+
+  .txt-medium {
+    max-width: 36rem;
+    font-size: 1.2rem;
+  }
+
+  .sr-only-focusable:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  @media (max-width: 991px) {
+    .page-container {
+      align-items: stretch;
+    }
+
+    .page-container.container-center-text {
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .h-x-large {
+      font-size: 3.5rem;
+    }
+
+    .txt-medium {
+      font-size: 1.15rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .h-x-large {
+      font-size: 3rem;
+    }
+
+    .txt-medium {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .h-x-large {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
 }

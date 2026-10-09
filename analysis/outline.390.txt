@@ -1,0 +1,271 @@
+<body.body> [0,0 390x8481]
+  <div.navbar-div> [0,0 390x87] data={"wf-Navbar-Variant":"base"}
+    <a.nav-banner.w-inline-block> [0,0 390x33] href=https://www.stuut.ai/blog/why-we-raised-series-b data={"wfNativeIdPath":"4f1c6fb5-9ec4-4fa6-e610-82d14b7a56c4:3af0260b-9ef0-f35a-4a7b-a6b6951948ce","wfAoClickEngagementTracking":"true","wfElementId":"3af0260b-9ef0-f35a-4a7b-a6b6951948ce","wfComponentContext":"%5B%7B%22componentId%22%3A%223af0260b-9ef0-f35a-4a7b-a6b6951948cd%22%2C%22instanceId%22%3A%224f1c6fb5-9ec4-4fa6-e610-82d14b7a56c4%22%7D%5D"}
+      <div.banner-content-div> [8,0 325x33]
+        <div> [8,9 325x15] "Stuut raises a $52.5M Series B led by Insight Partners"
+        <div.banner-arrow.w-embed> [368,7 16x16]
+          <svg> [368,7 16x16]
+    <div.navbar.w-nav> [0,33 390x54] data={"collapse":"medium","animation":"default","duration":"650","wId":"3af0260b-9ef0-f35a-4a7b-a6b6951948d3","easing":"ease-out-cubic","easing2":"ease-in-out-quad"}
+      <div.container.is-nav> [8,43 374x32]
+        <a.brand.w-nav-brand.w--current> [8,-78 68x23] href=/ data={"wfNativeIdPath":"4f1c6fb5-9ec4-4fa6-e610-82d14b7a56c4:3af0260b-9ef0-f35a-4a7b-a6b6951948d5","wfAoClickEngagementTracking":"true","wfElementId":"3af0260b-9ef0-f35a-4a7b-a6b6951948d5","wfComponentContext":"%5B%7B%22componentId%22%3A%223af0260b-9ef0-f35a-4a7b-a6b6951948cd%22%2C%22instanceId%22%3A%224f1c6fb5-9ec4-4fa6-e610-82d14b7a56c4%22%7D%5D"}
+          <div.logo.w-embed> [8,-78 160x23]
+            <svg> [8,-78 160x23]
+        <div.menu-button.w-nav-button> [342,43 40x32]
+          <div.menu-icon-wrap> [342,43 40x32]
+            <div.menu-line._1> [342,54 40x2]
+            <div.menu-line._2> [342,63 40x2]
+  <div> [0,0 390x0]
+    <div.hero-trigger> [0,0 0x844] data={"wId":"2ff98365-0349-5ddf-cdd6-4e82b0f73c5c"}
+    <div.w-embed> [0,0 390x0]
+    <div.noise-overlay> [-218,-612 780x1688]
+  <main.main> [0,0 390x8481]
+    <header.section.is-home-hero> [0,0 390x944] data={"wId":"2b13b86b-4e24-9dd4-d1d1-525662e3a204"}
+      <div.section-padding.is-home-hero> [0,0 390x944]
+        <div.container> [8,96 374x53]
+          <div.hero-logo-div> [8,96 374x53]
+            <div.hero-logo.w-embed> [8,96 374x53]
+              <svg> [8,96 374x53]
+        <div.container.is-bottom-align> [8,157 374x756]
+          <div.d.is-50.is-tab-100> [8,501 374x412]
+            <div.is-max-50> [8,501 374x87]
+              <h1.h-large> [8,501 374x87]
+                <strong.h-x-large> [8,492 319x97] "Your AR coworker for order-to-cash"
+            <div.pad-bottom.is-1-rem> [8,595 374x74]
+              <p.txt-medium-5> [8,595 374x66] "Stuut moves every customer and invoice from order to cash, so you collect 40% more cash from revenue you've already earned."
+            <div.d> [8,693 374x21]
+              <a.txt-button.w-button> [8,693 159x21] href=#popup-open data={"wf-TxtButton-Variant":"blue","wfNativeIdPath":"64717489-cf55-3662-704f-4d72f7db4a99:64717489-cf55-3662-704f-4d72f7db4a9a","wfAoClickEngagementTracking":"true","wfElementId":"64717489-cf55-3662-704f-4d72f7db4a9a","wfComponentContext":"%5B%7B%22componentId%22%3A%2264717489-cf55-3662-704f-4d72f7db4a9a%22%2C%22instanceId%22%3A%2264717489-cf55-3662-704f-4d72f7db4a99%22%7D%5D"} "Watch How It Works"
+            <div.demo-form.w-form> [8,722 374x182]
+              <form.demo-form-content> [8,754 374x150] data={"name":"Email Capture Homepage","emailCapture":"form","wfPageId":"6a071561c8d2a321a5d0a030","wfElementId":"2b13b86b-4e24-9dd4-d1d1-525662e3a212","turnstileSitekey":"0x4AAAAAAAQTptj2So4dx43e"}
+                <input.form-field.w-input> [26,772 338x38] data={"name":"Email","emailCapture":"input"}
+                <input.button.is-blue.w-button> [26,826 338x44] data={"wait":"On it!","wfNativeIdPath":"2b13b86b-4e24-9dd4-d1d1-525662e3a214","wfAoClickEngagementTracking":"true","wfElementId":"2b13b86b-4e24-9dd4-d1d1-525662e3a214","wfEventIds":"157101964"}
+                <div> [26,886 338x0]
+                  <div> [26,886 338x0]
+            <div.w-embed> [8,912 0x0]
+            <div.w-embed.w-script> [382,912 0x0]
+          <div.home-lottie-div.load-2> [14,173 368x304]
+            <div.home-hero-lottie.is-talk> [246,315 136x161] data={"wId":"56fc04d3-c59e-b790-b8e2-6218b3084c12","animationType":"lottie","src":"https://cdn.prod.website-files.com/6a071561c8d2a321a5d0a044/6a14581e0f3eb0d5d9f750a7_Talk-Loop-03-Lottie.json","loop":"1","direction":"1","autoplay":"1","isIx2Target":"0","renderer":"svg","defaultDuration":"0","duration":"3.033333333333333","loading":"eager"}
+              <svg> [246,315 136x160]
+            <div.bubble-scroll-div> [14,173 0x0]
+              <div.bubble-div> [14,173 224x149]
+                <img.bubble-img> [14,173 224x159] src=6a14590e3f58effc6307b3d5_bubble.svg
+                <div.chat-bubble-questions.w-dyn-list> [14,173 224x24]
+                  <div.chat-bubble-question-list.w-dyn-items> [26,185 200x0]
+    <section.section.is-bg-color-grey> [0,944 390x662]
+      <div.section-padding> [0,944 390x662]
+        <div.container.is-center.is-txt-center> [8,1040 374x470]
+          <div.pad-bottom.is-2-rem> [8,1040 374x118]
+            <h2.h-x-large.trust> [8,1040 374x118] "Stuut clocks in at the world’s leading enterprises"
+              <br> [379,1031 0x57]
+          <div.w-embed> [195,1198 0x0]
+          <div.logos-wrap.w-dyn-list> [8,1206 374x272]
+            <div.logos-list.w-dyn-items> [8,1206 374x272]
+              <div.logos-item.w-dyn-item> [19,1206 168x80]
+                <div.logo-card-div> [19,1206 168x80]
+                  <img.full-img> [21,1208 164x76] src=6a0759b260c069623fd6a179_Stuut%20Partner%20Customer%20Logos%20PerkinsElmer%20FINAL%202026-04.avif
+              <div.logos-item.w-dyn-item> [203,1206 168x80]
+                <div.logo-card-div> [203,1206 168x80]
+                  <img.full-img> [205,1208 164x76] src=6a07599caab293558fe382d9_Stuut%20Partner%20Customer%20Logos%20verifone%20FINAL%202026-04-p-500.avif
+              <div.logos-item.w-dyn-item> [19,1302 168x80]
+                <div.logo-card-div> [19,1302 168x80]
+                  <img.full-img> [21,1304 164x76] src=6a0759c81bcb86cd88494b73_Stuut%20Partner%20Customer%20Logos%20Honeywell%20FINAL%202026-04.avif
+              <div.logos-item.w-dyn-item> [203,1302 168x80]
+                <a.logo-card-link.w-inline-block> [203,1302 168x80] href=/case-studies/zoominfo data={"wfNativeIdPath":"27888a32-57cf-2658-af0d-1aa7142a87af:27888a32-57cf-2658-af0d-1aa7142a87ba_instance-3","wfAoClickEngagementTracking":"true","wfElementId":"27888a32-57cf-2658-af0d-1aa7142a87ba","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a071561c8d2a321a5d0a061%22%2C%22itemId%22%3A%226a0758487b858cd1e21fd8c5%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%2227888a32-57cf-2658-af0d-1aa7142a87b0%22%2C%22instanceId%22%3A%2227888a32-57cf-2658-af0d-1aa7142a87af%22%7D%5D"}
+                  <img.full-img> [205,1304 164x76] src=6a0759d601b7821369d61d3d_Stuut%20Partner%20Customer%20Logos%20ZoomInfo%20FINAL%202026-04-p-500.avif
+                  <div.case-study-label> [290,1291 88x26]
+              <div.logos-item.w-dyn-item> [19,1398 168x80]
+                <div.logo-card-div> [19,1398 168x80]
+                  <img.full-img> [21,1400 164x76] src=6a888c250f0e7980653e3691_Frame%202147239546.avif
+              <div.logos-item.w-dyn-item> [203,1398 168x80]
+                <a.logo-card-link.w-inline-block> [203,1398 168x80] href=/case-studies/bishop-lifting data={"wfNativeIdPath":"27888a32-57cf-2658-af0d-1aa7142a87af:27888a32-57cf-2658-af0d-1aa7142a87ba_instance-5","wfAoClickEngagementTracking":"true","wfElementId":"27888a32-57cf-2658-af0d-1aa7142a87ba","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a071561c8d2a321a5d0a061%22%2C%22itemId%22%3A%226a075767becf8a01cbda5f53%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%2227888a32-57cf-2658-af0d-1aa7142a87b0%22%2C%22instanceId%22%3A%2227888a32-57cf-2658-af0d-1aa7142a87af%22%7D%5D"}
+                  <img.full-img> [205,1400 164x76] src=6a0759ef27e5edde9302e3ab_Stuut%20Partner%20Customer%20Logos%20BishopLfting%20FINAL%202026-04-p-500.avif
+                  <div.case-study-label> [290,1387 88x26]
+    <section.section.is-bg-color-red> [0,1606 390x1032]
+      <div.section-padding.is-b-half> [0,1606 390x703]
+        <div.container> [8,1702 374x559]
+          <div.dot-eyebrow-div.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,1702 127x15] data={"wf-DotEyebrowLabel-Variant":"white"}
+            <div.dot-eyebrow.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,1706 6x6]
+            <h2.eyebrow-txt> [22,1702 113x15] "BY THE NUMBERS"
+          <div.stats-div> [8,1741 374x520]
+            <div.stat-item> [8,1741 374x168]
+              <div.nb-txt> [26,1759 338x96] "$3B+"
+              <div.stat-txt> [26,1871 338x20] "Moved through Stuut"
+                <br> [194,1873 0x16]
+            <div.stat-item> [8,1917 374x168]
+              <div.nb-txt> [19,2269 351x196] "40%"
+              <div.stat-txt> [26,2079 338x20] "More cash flow"
+            <div.stat-item> [8,2093 374x168]
+              <div.nb-txt> [19,2445 351x196] "47%"
+              <div.stat-txt> [26,2255 338x20] "Reduction in DSO"
+      <div.section-padding.is-t-half.is-b-half> [0,2309 390x330]
+        <div.container> [8,2357 374x234]
+          <div.callout-div.is-blue-grid.w-variant-ecb3424c-cf0f-fb30-156d-311cc72af72c> [8,2357 374x234] data={"wf-CalloutDiv-Variant":"grey"}
+            <div> [36,2433 318x82] "Live in 3 days. Cash flow in 7."
+        <div.half-blue-bg> [0,2474 390x165]
+    <section.section.is-bg-color-grey.is-on-top> [0,2639 390x770]
+      <div.section-padding> [0,2639 390x770]
+        <div.container> [8,2735 374x578]
+          <div.dot-eyebrow-div> [8,2735 313x15] data={"wf-DotEyebrowLabel-Variant":"blue"}
+            <div.dot-eyebrow> [8,2739 6x6]
+            <h2.eyebrow-txt> [22,2735 300x15] "Everything from order to cash, handled"
+          <div.offer-wrap.w-dyn-list> [8,2773 374x539] data={"wId":"d492cc7d-0645-3340-957d-8672c63dffc3"}
+            <div.offer-list.w-dyn-items> [8,2773 374x539]
+              <div.offer-item.w-dyn-item> [8,2773 374x83]
+                <a.offer-button.w-inline-block> [8,2773 374x83] href=/product/collections data={"wfNativeIdPath":"d492cc7d-0645-3340-957d-8672c63dffbf:d492cc7d-0645-3340-957d-8672c63dffc6_instance-0","wfAoClickEngagementTracking":"true","wfElementId":"d492cc7d-0645-3340-957d-8672c63dffc6","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a0daf580100b9c6e9a57938%22%2C%22itemId%22%3A%226a0daf9206b5fa5b0e027d58%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffc0%22%2C%22instanceId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffbf%22%7D%5D"}
+                  <div> [24,2797 342x35] "Collections"
+              <div.offer-item.w-dyn-item> [8,2864 374x83]
+                <a.offer-button.w-inline-block> [8,2864 374x83] href=/product/cash-application data={"wfNativeIdPath":"d492cc7d-0645-3340-957d-8672c63dffbf:d492cc7d-0645-3340-957d-8672c63dffc6_instance-1","wfAoClickEngagementTracking":"true","wfElementId":"d492cc7d-0645-3340-957d-8672c63dffc6","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a0daf580100b9c6e9a57938%22%2C%22itemId%22%3A%226a0dafa994b865dace600651%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffc0%22%2C%22instanceId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffbf%22%7D%5D"}
+                  <div> [24,2888 342x35] "Cash Application"
+              <div.offer-item.w-dyn-item> [8,2956 374x83]
+                <a.offer-button.w-inline-block> [8,2956 374x83] href=/product/payments data={"wfNativeIdPath":"d492cc7d-0645-3340-957d-8672c63dffbf:d492cc7d-0645-3340-957d-8672c63dffc6_instance-2","wfAoClickEngagementTracking":"true","wfElementId":"d492cc7d-0645-3340-957d-8672c63dffc6","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a0daf580100b9c6e9a57938%22%2C%22itemId%22%3A%226a0dafbc3bfd25dbb107a07f%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffc0%22%2C%22instanceId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffbf%22%7D%5D"}
+                  <div> [24,2980 342x35] "Payments"
+              <div.offer-item.w-dyn-item> [8,3047 374x83]
+                <a.offer-button.w-inline-block> [8,3047 374x83] href=/product/disputes-deductions data={"wfNativeIdPath":"d492cc7d-0645-3340-957d-8672c63dffbf:d492cc7d-0645-3340-957d-8672c63dffc6_instance-3","wfAoClickEngagementTracking":"true","wfElementId":"d492cc7d-0645-3340-957d-8672c63dffc6","wfCmsContext":"%5B%7B%22collectionId%22%3A%226a0daf580100b9c6e9a57938%22%2C%22itemId%22%3A%226a0dafc6421dfbb8fc326bec%22%7D%5D","wfComponentContext":"%5B%7B%22componentId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffc0%22%2C%22instanceId%22%3A%22d492cc7d-0645-3340-957d-8672c63dffbf%22%7D%5D"}
+                  <div> [24,3071 342x35] "Disputes & Deductions"
+              <div.offer-item.w-dyn-item> [8,3138 374x83]
+                <div.offer-button> [8,3138 374x83]
+                  <div> [24,3162 342x35] "Order Management"
+                <div.case-study-label.is-offering> [269,3125 97x26]
+                  <div> [277,3130 80x15] "Coming soon"
+              <div.offer-item.w-dyn-item> [8,3229 374x83]
+                <div.offer-button> [8,3229 374x83]
+                  <div> [24,3253 342x35] "Credit"
+                <div.case-study-label.is-offering> [269,3216 97x26]
+                  <div> [277,3222 80x15] "Coming soon"
+    <section.section.is-blue-grid-static> [0,3408 390x2178]
+      <div.section-padding-copy.is-b-half.how> [0,3408 390x2178]
+        <div.container.how-copy> [8,3536 374x2002]
+          <div.dot-eyebrow-div.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,3536 374x15] data={"wf-DotEyebrowLabel-Variant":"white"}
+            <div.dot-eyebrow.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,3541 6x6]
+            <h2.eyebrow-txt> [22,3536 203x15]
+              <strong> [22,3533 203x19] "WHAT MAKES STUUT DIFFERENT"
+          <div.d> [8,3583 374x182]
+            <div.pad-bottom.is-4-rem> [8,3583 374x118]
+              <h3.h-x-large> [8,3583 374x118]
+                <strong> [8,3574 331x135] "It used to take a village. Now it takes Stuut."
+                  <br> [249,3613 0x57]
+          <div.div-block-13> [8,3781 374x1741]
+            <div.content> [8,3781 374x1741]
+              <div.hiw2-content> [8,3781 374x1677]
+                <div.media-copy> [8,3781 374x296]
+                  <div.anim-frame-12> [8,3781 374x296]
+                <div.slide-column-1.sticker> [8,4093 374x232] data={"hiwStep":"1"}
+                  <div.pad-bottom.is-1-rem> [8,4093 374x216]
+                <div.media-copy> [8,4389 374x296]
+                  <div.anim-frame-12> [8,4389 374x296]
+                <div.slide-column-1.sticker> [8,4701 374x210] data={"hiwStep":"2"}
+                  <div.pad-bottom.is-1-rem> [8,4701 374x194]
+                <div.media-copy> [8,4975 374x296]
+                  <div.anim-frame-12> [8,4975 374x296]
+                <div.slide-column-1.sticker.is-inview> [8,5287 374x171] data={"hiwStep":"3"}
+                  <div.pad-bottom.is-1-rem> [8,5287 374x155]
+          <div.w-embed.w-script> [8,5538 374x0]
+    <section.section.is-bg-color-yellow> [0,5586 390x293]
+      <div.invoice-lottie-div> [0,5586 390x293]
+        <div.invoice-lottie> [-195,5682 585x200] data={"wId":"ec66909d-20b4-da2f-fe5d-6b4ed8a2f680","animationType":"lottie","src":"https://cdn.prod.website-files.com/6a071561c8d2a321a5d0a044/6a14581ed4c4ab629850c692_Stuut-Eat-04-Lottie.json","loop":"1","direction":"1","autoplay":"1","isIx2Target":"0","renderer":"svg","defaultDuration":"0","duration":"2.1","loading":"eager"}
+          <svg> [-195,5682 585x198]
+    <section.section.is-blue-grid-static> [0,5879 390x695]
+      <div.section-padding> [0,5879 390x695]
+        <div.container> [8,5975 374x503]
+          <div.dot-eyebrow-div.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,5975 179x40] data={"wf-DotEyebrowLabel-Variant":"white"}
+            <div.dot-eyebrow.w-variant-aaa3d2dd-1c62-8dcb-1724-7589f19933d5> [8,5992 6x6]
+            <h2.eyebrow-txt> [22,5988 166x15] "WE’VE GOT THE RECEIPTS"
+          <div.slider-arrows-wrap> [326,5975 56x24]
+            <button.slider-arrow.is-white> [326,5975 24x24] data={"overlapSliderButton":"prev"}
+              <div.slider-arrow-icon.w-embed> [333,5982 11x11]
+                <svg> [333,5982 11x11]
+            <button.slider-arrow.is-white> [358,5975 24x24] data={"overlapSliderButton":"next"}
+              <div.slider-arrow-icon.w-embed> [365,5982 11x11]
+                <svg> [365,5982 11x11]
+          <div.overlapping-slider__wrap> [8,6039 374x439] data={"slideSpeed":"0.5","overlapSliderInit":""}
+            <div.overlapping-slider__collection.w-dyn-list> [8,6039 374x439] data={"overlapSliderCollection":""}
+              <div.overlapping-slider__list.w-dyn-items> [8,6039 3947x439] data={"overlapSliderList":""}
+                <div.overlapping-slider__item.w-dyn-item> [8,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [8,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [367,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [367,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [726,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [726,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [1084,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [1084,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [1443,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [1443,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [1802,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [1802,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [2161,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [2161,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [2520,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [2520,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [2878,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [2878,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [3237,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [3237,6039 351x439]
+                <div.overlapping-slider__item.w-dyn-item> [3596,6039 351x439] data={"overlapSliderItem":""}
+                  <div.quote-card> [3596,6039 351x439]
+    <section.section.is-bg-color-grey> [0,6574 390x907]
+      <div.section-padding> [0,6574 390x907]
+        <div.container.is-center.is-txt-center> [8,6670 374x715]
+          <div.pad-bottom.is-2-rem.is-max-60> [8,6670 374x78]
+            <h2.h-x-large.home> [8,6670 374x78] "A new coworker for your existing stack"
+          <p.txt-medium-5> [8,6788 374x66] "Live in just 3 days. Stuut connects to your ERP, banks, CRM, and payment systems. Nothing gets replaced."
+          <div.w-embed> [195,6870 0x0]
+          <div.nested-logos-wrap.w-dyn-list> [8,6878 374x474]
+            <div.nested-logos-list.w-dyn-items> [8,6878 374x474]
+              <div.nested-logos-item.w-dyn-item> [8,6878 374x474]
+                <div.logos-wrap.w-dyn-list> [8,6878 374x474]
+                  <div.logos-list.is-5-columns.w-dyn-items> [8,6878 374x474]
+    <section.section.is-cta-blue-grid.w-variant-4a182c23-7dda-ff03-113c-86664fcde423> [0,7481 390x457] data={"wf-CtaSection-Variant":"red"}
+      <div.section-padding> [0,7481 390x457]
+        <div.container.is-center.is-txt-center> [8,7577 374x265]
+          <div.pad-bottom.is-2-rem> [8,7577 374x81]
+            <h2.display-h> [8,7577 374x81] "Let Stuut take it from here"
+          <p.txt-medium-5> [8,7697 374x44] "Turn every order into cash and give your team back the work only they can do."
+          <a.button.w-variant-3e5fa81f-96e6-6b1d-b6d7-0e1b2f7be3a2.w-inline-block> [87,7757 217x52] href=/demo data={"wf-Button-Variant":"yellow-xl","wfNativeIdPath":"0aa2e74e-ef1d-e400-7e8e-c8700c26bb5c:eced42d3-bb39-bb19-a513-3d91fe72c3ac:12da7678-8a8d-7fef-a5c5-8a7c8f4b701e","wfAoClickEngagementTracking":"true","wfElementId":"12da7678-8a8d-7fef-a5c5-8a7c8f4b701e","wfComponentContext":"%5B%7B%22componentId%22%3A%22eced42d3-bb39-bb19-a513-3d91fe72c3a6%22%2C%22instanceId%22%3A%220aa2e74e-ef1d-e400-7e8e-c8700c26bb5c%22%7D%2C%7B%22componentId%22%3A%2212da7678-8a8d-7fef-a5c5-8a7c8f4b701e%22%2C%22instanceId%22%3A%22eced42d3-bb39-bb19-a513-3d91fe72c3ac%22%7D%5D","wfEventIds":"157101964"}
+            <div> [108,7774 175x19] "Request demo"
+    <section.section.is-footer> [0,7937 390x544] data={"wId":"2e281756-f2aa-7e8b-5ebf-27c32372ff17"}
+      <div.section-padding.is-footer> [0,7937 390x544]
+        <div.container.is-footer> [8,7969 374x480]
+          <div.footer-nav-div> [8,7969 374x229]
+            <div.footer-nav-item> [8,7969 175x152]
+              <a.navlink.is-footer.w-inline-block> [8,7969 42x15] href=/about data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:2e281756-f2aa-7e8b-5ebf-27c32372ff39","wfAoClickEngagementTracking":"true","wfElementId":"2e281756-f2aa-7e8b-5ebf-27c32372ff39","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [8,7969 42x14] "About"
+              <a.navlink.is-footer.w-inline-block> [8,7997 90x15] href=/case-studies data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:2e281756-f2aa-7e8b-5ebf-27c32372ff3c","wfAoClickEngagementTracking":"true","wfElementId":"2e281756-f2aa-7e8b-5ebf-27c32372ff3c","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [8,7997 90x14] "Case Studies"
+              <a.navlink.is-footer.w-inline-block> [8,8024 31x15] href=/blog data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:2e281756-f2aa-7e8b-5ebf-27c32372ff3f","wfAoClickEngagementTracking":"true","wfElementId":"2e281756-f2aa-7e8b-5ebf-27c32372ff3f","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [8,8024 31x14] "Blog"
+              <a.navlink.is-footer.w-inline-block> [8,8051 54x15] href=https://jobs.ashbyhq.com/stuut-ai data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:430c5087-fc63-5f16-9a71-a145de786e96","wfAoClickEngagementTracking":"true","wfElementId":"430c5087-fc63-5f16-9a71-a145de786e96","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <div.button-txt> [8,8051 54x14] "Careers"
+              <a.navlink.is-footer.w-inline-block> [8,8079 91x15] href=/partnerships data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:deb3d53d-ee32-5d5a-c962-448aab1675f5","wfAoClickEngagementTracking":"true","wfElementId":"deb3d53d-ee32-5d5a-c962-448aab1675f5","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [8,8079 91x14] "Partnerships"
+              <a.navlink.is-footer.w-inline-block> [8,8106 49x15] href=https://games.vibes.stuut.ai/ data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:98004a7e-1685-00bc-4978-90c33b732112","wfAoClickEngagementTracking":"true","wfElementId":"98004a7e-1685-00bc-4978-90c33b732112","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <div.button-txt> [8,8106 49x14] "Arcade"
+            <div.footer-nav-item> [207,7969 175x152]
+              <a.navlink.is-footer.w-inline-block> [207,7969 92x15] href=https://trust.stuut.co/ data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:7def2e8e-a0b9-c99e-ab62-4affb18d3df2","wfAoClickEngagementTracking":"true","wfElementId":"7def2e8e-a0b9-c99e-ab62-4affb18d3df2","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [207,7969 92x14] "Trust Center"
+              <a.navlink.is-footer.w-inline-block> [207,7997 99x15] href=/ai-phone-call data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:29651738-82d0-f799-36bd-4e5bea38bb8f","wfAoClickEngagementTracking":"true","wfElementId":"29651738-82d0-f799-36bd-4e5bea38bb8f","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <div.button-txt> [207,7997 99x14] "Try AI Calling"
+              <a.navlink.is-footer.w-inline-block> [207,8024 161x15] href=/value-creation-calculator data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:b9594d7a-2073-7519-45e4-7fb5363d614b","wfAoClickEngagementTracking":"true","wfElementId":"b9594d7a-2073-7519-45e4-7fb5363d614b","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D","wfEventIds":"157101964"}
+                <div.button-txt> [207,8024 161x14] "Calculate Stuut’s Value"
+              <a.navlink.is-footer.w-inline-block> [207,8051 124x15] href=/terms-of-service data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:2e281756-f2aa-7e8b-5ebf-27c32372ff42","wfAoClickEngagementTracking":"true","wfElementId":"2e281756-f2aa-7e8b-5ebf-27c32372ff42","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <div.button-txt> [207,8051 124x14] "Terms of Services"
+              <a.navlink.is-footer.w-inline-block> [207,8079 99x15] href=/privacy-policy data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:4e7ac4bd-2461-0bd8-5043-98af2559f9e1","wfAoClickEngagementTracking":"true","wfElementId":"4e7ac4bd-2461-0bd8-5043-98af2559f9e1","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <div.button-txt> [207,8079 99x14] "Privacy Policy"
+            <div.social-wrap> [8,8138 374x61]
+              <a.social-link.w-inline-block> [8,8170 29x29] href=https://www.linkedin.com/company/stuut data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:45ee923a-1607-46e9-7493-3022cc023c6e","wfAoClickEngagementTracking":"true","wfElementId":"45ee923a-1607-46e9-7493-3022cc023c6e","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <img.full-img> [11,8172 24x24] src=6a74881da26dcebee2b596d0_social-icon-li.svg
+              <a.social-link.w-inline-block> [43,8170 29x29] href=https://x.com/StuutAI data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:737454c0-76b7-e7d4-4d8f-15826175e8ad","wfAoClickEngagementTracking":"true","wfElementId":"737454c0-76b7-e7d4-4d8f-15826175e8ad","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <img.full-img> [46,8172 24x24] src=6a74881dad74a9c3cfd38cee_social-icon-x.svg
+              <a.social-link.w-inline-block> [78,8170 29x29] href=https://www.instagram.com/stuutai/ data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:86e5c649-f1c3-9c67-3bcd-2ac827d9d3f0","wfAoClickEngagementTracking":"true","wfElementId":"86e5c649-f1c3-9c67-3bcd-2ac827d9d3f0","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <img.full-img> [81,8172 24x24] src=6a74881de2d476bf5a78c063_social-icon-ig.svg
+              <a.social-link.w-inline-block> [114,8170 29x29] href=https://www.youtube.com/@StuutTechnologies data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:3049ae59-914a-1808-df94-5d17cc780600","wfAoClickEngagementTracking":"true","wfElementId":"3049ae59-914a-1808-df94-5d17cc780600","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+                <img.full-img> [116,8172 24x24] src=6a74881de5aa7b4328a4026c_social-icon-yt.svg
+          <div.copyright-div.is-year> [8,8379 151x18]
+            <div.copyright-txt> [8,8383 151x14] "© All Rights Reserved"
+              <span.year> [20,8384 27x11] data={"currentYear":""} "2026"
+          <a.footer-logo-link.w-inline-block.w--current> [8,8286 374x53] href=/ data={"wfNativeIdPath":"2e281756-f2aa-7e8b-5ebf-27c32372ff16:2e281756-f2aa-7e8b-5ebf-27c32372ff4b","wfAoClickEngagementTracking":"true","wfElementId":"2e281756-f2aa-7e8b-5ebf-27c32372ff4b","wfComponentContext":"%5B%7B%22componentId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff17%22%2C%22instanceId%22%3A%222e281756-f2aa-7e8b-5ebf-27c32372ff16%22%7D%5D"}
+            <div.footer-logo.w-embed> [8,8286 374x53]
+              <svg> [8,8286 374x53]
+          <div.copyright-div> [8,8405 374x44]
+            <div.copyright-txt.is-small> [8,8421 374x28] "Based in NYC, backed by Andreessen Horowitz, Khosla Ventures, Activant Capital"
+      <div.footer-lottie> [121,8253 257x237] data={"timelineId":"footer","isIx2Target":"1","wId":"2e281756-f2aa-7e8b-5ebf-27c32372ff52","animationType":"lottie","src":"https://cdn.prod.website-files.com/6a071561c8d2a321a5d0a044/6a14581ee4f1d4b6c2fdd599_Pop-Up-Loop-03-Lottie.json","loop":"0","direction":"1","autoplay":"0","renderer":"svg","defaultDuration":"0","duration":"0","loading":"eager"}
+        <svg> [121,8253 257x235]
+  <div.consent_components-3> [0,8481 390x0]

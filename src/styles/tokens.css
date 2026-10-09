@@ -1,0 +1,67 @@
+/* Design tokens measured from the reference stylesheet (stuut26.shared.css). */
+/* Colours + fonts live in @theme so Tailwind utilities (bg-blue, text-yellow, font-hn…) can use them. */
+@theme {
+  --color-blue: #1665b5;
+  --color-light-blue: #2f85db;
+  --color-lighter-blue: #accef1;
+  --color-lightest-blue: #d5e7f8;
+  --color-grey: #e3e3e3;
+  --color-white: #fff;
+  --color-red: #d6380e;
+  --color-red-hover: #b43513;
+  --color-yellow: #f2f56f;
+  --color-beige: #e6886e;
+  --color-green: #1db050;
+  --color-dd-hover: #155291;
+
+  --font-hn: var(--font-hn-face), Arial, sans-serif;
+  --font-quadrant: var(--font-quadrant-face), "Times New Roman", serif;
+  --breakpoint-tab: 62rem;
+}
+
+:root {
+  --container-max: 100rem;
+  --gutter-s: 1rem;
+  --gutter-m: 2rem;
+  --gutter-l: 4rem;
+  --gutter-xl: 6rem;
+  --page-margin: 2rem;
+
+  --radius-s: 0.3rem;
+  --radius-l: 0.5rem;
+  --radius-xl: 1rem;
+  --line-1: 1px;
+  --line-2: 2px;
+  --line-12: 12px;
+
+  /* Eases ported from Webflow IX2 */
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-webflow: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --ease-back-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-menu: cubic-bezier(0.444, 0.014, 0.117, 1.002);
+
+  --grid-bg: url("/assets/images/blue-grid.svg");
+}
+
+/* Spacing scale steps down per breakpoint (Webflow variable modes). */
+@media (max-width: 991px) {
+  :root {
+    --container-max: 100%;
+    --page-margin: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter-s: 0.5rem;
+    --gutter-m: 1rem;
+    --gutter-l: 2rem;
+    --gutter-xl: 3rem;
+    --page-margin: 0.5rem;
+  }
+}

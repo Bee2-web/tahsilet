@@ -1,0 +1,153 @@
+.section {
+  color: var(--color-white);
+  background-color: var(--color-red);
+}
+
+.top {
+  padding-bottom: 4rem;
+}
+
+.bottom {
+  flex: 1;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.stats {
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+}
+
+.stat {
+  gap: 1.5rem;
+  border: var(--line-2) solid var(--color-blue);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-yellow);
+  color: var(--color-blue);
+  flex-flow: column;
+  flex: 1;
+  padding: 1rem 2rem 2rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.number {
+  letter-spacing: -0.02em;
+  font-family: var(--font-hn);
+  font-size: 8.5em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.label {
+  font-size: 1.1rem;
+}
+
+.callout {
+  z-index: 2;
+  gap: 2rem;
+  border: var(--line-12) solid var(--color-blue);
+  background-color: var(--color-grey);
+  width: 100%;
+  color: var(--color-blue);
+  text-align: center;
+  text-wrap: balance;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-family: var(--font-hn);
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.02;
+  display: flex;
+  position: relative;
+}
+
+.halfBlue {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  inset: auto 0 0;
+}
+
+@media (max-width: 991px) {
+  .stats {
+    gap: 0.5rem;
+  }
+
+  .stat {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .number {
+    letter-spacing: -0.02rem;
+    font-size: 4rem;
+  }
+
+  .callout {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .top {
+    padding-bottom: 3rem;
+  }
+
+  .bottom {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .stats {
+    flex-flow: column;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .number {
+    font-size: 8rem;
+  }
+
+  .callout {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .stats {
+    padding-top: 0;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .number {
+    font-size: 6rem;
+  }
+
+  .callout {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 2.5rem;
+  }
+}

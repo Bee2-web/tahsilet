@@ -1,0 +1,64 @@
+.button {
+  border: var(--line-2) solid var(--color-blue);
+  background-color: var(--color-yellow);
+  color: var(--color-blue);
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75em 1em;
+  font-family: var(--font-quadrant);
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: all 0.25s ease;
+  display: flex;
+}
+
+.button:hover {
+  background-color: var(--color-blue);
+  color: var(--color-yellow);
+}
+
+.blue {
+  color: var(--color-yellow);
+  background-color: var(--color-blue);
+}
+
+.blue:hover {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+}
+
+.nav {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+/* "yellow-xl" variant (final CTA) */
+.xl {
+  text-transform: uppercase;
+  white-space: normal;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 991px) {
+  .xl {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    font-size: 1rem;
+  }
+
+  .xl {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .xl {
+    font-size: 1.2rem;
+  }
+}

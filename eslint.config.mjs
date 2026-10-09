@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference-analysis tooling (Playwright scripts, captured Webflow sources).
+    "analysis/**",
+    "tools/**",
   ]),
 ]);
 

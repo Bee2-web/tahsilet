@@ -1,0 +1,67 @@
+.section {
+  background-color: var(--color-grey);
+}
+
+.titleWrap {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 0 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.wrap {
+  /* Accounts for the reference's empty embed element (one extra column gap). */
+  margin-top: var(--gutter-s);
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.list {
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+}
+
+.item {
+  justify-content: center;
+  align-items: center;
+  max-width: 15rem;
+  display: flex;
+}
+
+.card {
+  padding: 0.5rem;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item {
+    width: 100%;
+    max-width: 12rem;
+  }
+
+  .card {
+    padding: 0.35rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .card {
+    padding: 0;
+  }
+}

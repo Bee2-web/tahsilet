@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.06 128.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-1" cx="64.03" cy="64.03" r="64.03"/>
+      <path id="linkedin" class="cls-2" d="M83.79,88.58v-20.19c0-4.14-1.2-8.28-6.07-8.28s-6.91,4.15-6.91,8.38v20.08h-13v-36.96h13v4.98c3.42-4.35,6.4-6.14,11.79-6.14s14.16,2.52,14.16,17.11v21.01h-12.97ZM45.79,46.14c-4.01,0-7.26-2.92-7.26-6.52s3.25-6.52,7.26-6.52,7.26,2.92,7.26,6.52-3.25,6.52-7.26,6.52ZM52.28,88.58h-13.03v-36.96h13.03v36.96Z"/>
+    </g>
+  </g>
+</svg>

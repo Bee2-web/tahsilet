@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# reference analysis artefacts (large captures, third-party source copies)
+/analysis/ref/
+/analysis/shots/
+/tools/node_modules/
+/analysis/compare/

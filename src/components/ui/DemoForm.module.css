@@ -1,0 +1,81 @@
+.demoForm {
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 2rem;
+}
+
+.content {
+  gap: 1rem;
+  border: var(--line-2) solid var(--color-blue);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-yellow);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 34rem;
+  min-height: 40px;
+  padding: 1rem;
+  display: flex;
+}
+
+.field {
+  display: block;
+  width: 100%;
+  height: 38px;
+  min-width: 0;
+  border: 0;
+  border-bottom: var(--line-1) solid var(--color-blue);
+  border-radius: 0;
+  color: var(--color-blue);
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-quadrant);
+  font-size: 1.1rem;
+  line-height: 1.42857;
+  outline: none;
+}
+
+.field::placeholder {
+  color: var(--color-blue);
+  opacity: 0.8;
+}
+
+.field:focus-visible {
+  border-bottom-width: 2px;
+}
+
+.submit {
+  flex: none;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  cursor: progress;
+}
+
+.error {
+  color: var(--color-red);
+  margin: 0.75rem 0 0;
+  font-size: 16px;
+  line-height: 148%;
+  max-width: 34rem;
+}
+
+@media (max-width: 991px) {
+  .field {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .content {
+    flex-flow: column;
+    align-items: stretch;
+  }
+
+  .field {
+    text-align: center;
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+}

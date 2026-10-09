@@ -1,0 +1,37 @@
+.section {
+  background-color: var(--color-red);
+  color: var(--color-grey);
+}
+
+.titleWrap {
+  margin: 0 0 2rem;
+}
+
+.title {
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  font-family: var(--font-hn);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+@media (max-width: 991px) {
+  .title {
+    letter-spacing: -0.01em;
+    font-size: 4.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 3.3rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .title {
+    letter-spacing: 0;
+    font-size: 2.8rem;
+  }
+}

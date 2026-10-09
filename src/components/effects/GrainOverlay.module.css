@@ -1,0 +1,47 @@
+.defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.noise {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 800;
+  opacity: 0.28;
+  filter: url(#grainy);
+  animation: noise 0.2s steps(4) infinite;
+}
+
+@keyframes noise {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  30% {
+    transform: translate(3%, -15%);
+  }
+  50% {
+    transform: translate(10%, 5%);
+  }
+  70% {
+    transform: translate(-10%, 10%);
+  }
+  90% {
+    transform: translate(5%, 15%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .noise {
+    animation: none;
+  }
+}
