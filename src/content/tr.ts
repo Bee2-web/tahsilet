@@ -91,16 +91,8 @@ export const tr: HomeContent = {
         label: "Türkiye'deki işletmelerin yaklaşık üçte biri, finansmana erişimi en büyük engel olarak görüyor.",
         source: "Kaynak: Dünya Bankası verileri",
       },
-      {
-        value: "↑",
-        label: "Tahsilat vadeleri uzuyor, işletme sermayesi üzerindeki baskı artıyor — özellikle ihracatçı ve imalatçı firmalarda.",
-        source: "Kaynak: Sektör gözlemleri, 2026",
-      },
-      {
-        value: "0",
-        label: "Araştırdığımız uluslararası rakiplerin hiçbiri Türkiye'ye özel — e-Fatura, TL ya da Türk ERP'lerine göre çalışmıyor.",
-        source: "Kaynak: Tahsilet.AI rekabet araştırması, Ağustos 2026",
-      },
+      { value: "%40", label: "Daha fazla nakit akışı" },
+      { value: "%47", label: "Ortalama tahsilat süresinde (DSO) azalma" },
     ],
     callout: "Türkiye'nin kurallarına göre inşa ediyoruz.",
   },

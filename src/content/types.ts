@@ -21,7 +21,7 @@ export type Step = { title: string; body: string };
 
 export type FlowStep = { when: string; channel: string };
 
-export type Stat = { value: string; label: string; source: string };
+export type Stat = { value: string; label: string; source?: string };
 
 export type Capability = { title: string; description: string };
 

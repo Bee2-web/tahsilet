@@ -44,7 +44,7 @@ export function Metrics({ content }: Props) {
                 <div className={styles.number}>{stat.value}</div>
                 <div className={styles.caption}>
                   <div className={styles.label}>{stat.label}</div>
-                  <div className={styles.source}>{stat.source}</div>
+                  {stat.source && <div className={styles.source}>{stat.source}</div>}
                 </div>
               </div>
             ))}

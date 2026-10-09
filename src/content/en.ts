@@ -91,16 +91,8 @@ export const en: HomeContent = {
         label: "Roughly one in three businesses in Türkiye name access to finance as their biggest obstacle.",
         source: "Source: World Bank data",
       },
-      {
-        value: "↑",
-        label: "Payment terms keep stretching and pressure on working capital keeps rising — especially for exporters and manufacturers.",
-        source: "Source: Industry observations, 2026",
-      },
-      {
-        value: "0",
-        label: "None of the international competitors we studied are built for Türkiye — e-Invoice, TRY or Turkish ERPs.",
-        source: "Source: Tahsilet.AI competitive research, August 2026",
-      },
+      { value: "40%", label: "More cash flow" },
+      { value: "47%", label: "Reduction in DSO" },
     ],
     callout: "Built for the way Türkiye does business.",
   },
