@@ -47,7 +47,7 @@ export function Hero({ content }: Props) {
         <div className="page-container">
           <div className={styles.logoDiv}>
             <div className={styles.logo}>
-              <BrandWordmark name={brand.name} />
+              <BrandWordmark name={brand.name} suffix={brand.suffix} />
             </div>
           </div>
         </div>

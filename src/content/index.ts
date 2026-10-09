@@ -25,7 +25,7 @@ export const aiAssistants = ["ChatGPT", "Perplexity", "Claude", "Grok", "Gemini"
 export function aiAssistantHref(name: (typeof aiAssistants)[number], locale: Locale) {
   const prompt = encodeURIComponent(
     locale === "tr"
-      ? `${SITE_URL}/ adresindeki Tahsilet'i özetle ve temel noktalarını analiz et`
+      ? `${SITE_URL}/ adresindeki Tahsilet.AI'ı özetle ve temel noktalarını analiz et`
       : `Summarize and analyze the key insights from ${SITE_URL}/`,
   );
   switch (name) {
@@ -43,7 +43,7 @@ export function aiAssistantHref(name: (typeof aiAssistants)[number], locale: Loc
 }
 
 export function mailtoHref(content: Pick<HomeContent, "contactEmail" | "locale">, from?: string) {
-  const subject = encodeURIComponent(content.locale === "tr" ? "Tahsilet - Demo Talebi" : "Tahsilet - Demo Request");
+  const subject = encodeURIComponent(content.locale === "tr" ? "Tahsilet.AI - Demo Talebi" : "Tahsilet.AI - Demo Request");
   const body = from
     ? encodeURIComponent(content.locale === "tr" ? `Merhaba, demo talep ediyorum. İletişim: ${from}` : `Hello, I'd like a demo. Contact: ${from}`)
     : "";

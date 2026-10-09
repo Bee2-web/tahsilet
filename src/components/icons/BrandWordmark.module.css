@@ -9,14 +9,9 @@
   display: flex;
   align-items: baseline;
   white-space: nowrap;
-  /* Tuned so the name alone ("Tahsilet") spans the full container width… */
-  font-size: 27cqw;
-  line-height: 0.86;
-}
-
-/* …and so does "Tahsilet.AI" when the suffix is shown. */
-.mark[data-suffix="true"] {
+  /* Tuned so "Tahsilet.AI" spans the full container width. */
   font-size: 22.6cqw;
+  line-height: 0.86;
 }
 
 .name {

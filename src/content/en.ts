@@ -5,13 +5,13 @@ import { referenceCompanies } from "./references";
 export const en: HomeContent = {
   locale: "en",
   meta: {
-    title: "Tahsilet — AI-Powered Collections Platform",
+    title: "Tahsilet.AI — AI-Powered Collections Platform",
     description:
-      "Tahsilet is an AI collections platform for mid-sized Turkish exporters and manufacturers — wired directly into e-Invoice and designed for KVKK and İYS compliance.",
+      "Tahsilet.AI is an AI collections platform for mid-sized Turkish exporters and manufacturers — wired directly into e-Invoice and designed for KVKK and İYS compliance.",
   },
-  brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet home" },
+  brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI home" },
   contactEmail: "info@tahsilet.ai",
-  announcement: { label: "Our early access program is open — introduce Tahsilet to your business", href: "#contact" },
+  announcement: { label: "Our early access program is open — introduce Tahsilet.AI to your business", href: "#contact" },
   nav: {
     label: "Main menu",
     items: [
@@ -62,7 +62,7 @@ export const en: HomeContent = {
     eyebrow: "AI-powered collections platform",
     title: "Free up your working capital.",
     titleAccent: "Get your receivables paid on time.",
-    body: "Tahsilet is an AI collections platform built for mid-sized Turkish exporters and manufacturers, speaking directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call — in your brand's name, by your rules.",
+    body: "Tahsilet.AI is an AI collections platform built for mid-sized Turkish exporters and manufacturers, speaking directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call — in your brand's name, by your rules.",
     secondaryCta: { label: "See How It Works", href: "#how-it-works" },
     emailPlaceholder: "Your work email",
     emailLabel: "Work email address",
@@ -99,7 +99,7 @@ export const en: HomeContent = {
       {
         value: "0",
         label: "None of the international competitors we studied are built for Türkiye — e-Invoice, TRY or Turkish ERPs.",
-        source: "Source: Tahsilet competitive research, August 2026",
+        source: "Source: Tahsilet.AI competitive research, August 2026",
       },
     ],
     callout: "Built for the way Türkiye does business.",
@@ -255,7 +255,7 @@ export const en: HomeContent = {
   audience: {
     eyebrow: "Who it's for",
     title: "Built for mid-sized exporters and manufacturers",
-    body: "Tahsilet is designed first for companies facing the same problems in their own industry.",
+    body: "Tahsilet.AI is designed first for companies facing the same problems in their own industry.",
     items: [
       { value: "200M+ TRY", label: "Annual revenue" },
       { value: "Export / Manufacturing", label: "Mostly B2B customer base" },
@@ -266,12 +266,12 @@ export const en: HomeContent = {
   integrations: {
     eyebrow: "Integrations",
     title: "Integrated with your ERP and accounting systems",
-    body: "Whatever accounting or ERP software you use, Tahsilet syncs your invoices and collection data in one click — no extra IT project or data migration required.",
+    body: "Whatever accounting or ERP software you use, Tahsilet.AI syncs your invoices and collection data in one click — no extra IT project or data migration required.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {
     eyebrow: "FAQ",
-    title: "What teams ask before switching to Tahsilet",
+    title: "What teams ask before switching to Tahsilet.AI",
     body: "What you need to know about an AI speaking to your customers on your behalf.",
     items: [
       {
@@ -303,8 +303,8 @@ export const en: HomeContent = {
   cta: {
     id: "contact",
     eyebrow: "Early access",
-    title: "Introduce Tahsilet to your business",
-    body: "Let's review your processes together and show you how Tahsilet can add value to your collections. Get in touch and let's talk.",
+    title: "Introduce Tahsilet.AI to your business",
+    body: "Let's review your processes together and show you how Tahsilet.AI can add value to your collections. Get in touch and let's talk.",
     button: "Contact us by email",
   },
   footer: {
@@ -329,7 +329,7 @@ export const en: HomeContent = {
         ],
       },
     ],
-    rights: "Tahsilet — All rights reserved.",
+    rights: "Tahsilet.AI — All rights reserved.",
     madeIn: "Made in Türkiye, for Türkiye.",
   },
   aiLabel: { label: "Explore Tahsilet with AI", ask: "Ask {name} about Tahsilet" },

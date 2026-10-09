@@ -5,13 +5,13 @@ import { referenceCompanies } from "./references";
 export const tr: HomeContent = {
   locale: "tr",
   meta: {
-    title: "Tahsilet — Yapay Zeka Destekli Tahsilat Platformu",
+    title: "Tahsilet.AI — Yapay Zeka Destekli Tahsilat Platformu",
     description:
-      "Tahsilet, orta ölçekli Türk ihracatçı ve imalatçı şirketler için e-Fatura'yla doğrudan konuşan, KVKK ve İYS'ye uygun yapay zeka tahsilat platformudur.",
+      "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketler için e-Fatura'yla doğrudan konuşan, KVKK ve İYS'ye uygun yapay zeka tahsilat platformudur.",
   },
-  brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet ana sayfa" },
+  brand: { name: "Tahsilet", suffix: ".AI", homeLabel: "Tahsilet.AI ana sayfa" },
   contactEmail: "info@tahsilet.ai",
-  announcement: { label: "Erken erişim programımız başladı — Tahsilet'i işletmenizle tanıştırın", href: "#contact" },
+  announcement: { label: "Erken erişim programımız başladı — Tahsilet.AI'ı işletmenizle tanıştırın", href: "#contact" },
   nav: {
     label: "Ana menü",
     items: [
@@ -62,7 +62,7 @@ export const tr: HomeContent = {
     eyebrow: "Yapay zeka destekli tahsilat platformu",
     title: "İşletme sermayenizi serbest bırakın.",
     titleAccent: "Alacaklarınız zamanında tahsil edilsin.",
-    body: "Tahsilet, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura'yla doğrudan konuşan bir yapay zeka tahsilat platformudur. Alacaklarınızı e-posta, WhatsApp ve sesli aramayla — sizin markanız adına, sizin kurallarınızla — takip eder.",
+    body: "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura'yla doğrudan konuşan bir yapay zeka tahsilat platformudur. Alacaklarınızı e-posta, WhatsApp ve sesli aramayla — sizin markanız adına, sizin kurallarınızla — takip eder.",
     secondaryCta: { label: "Nasıl Çalıştığını Gör", href: "#how-it-works" },
     emailPlaceholder: "İş e-postanız",
     emailLabel: "İş e-posta adresi",
@@ -99,7 +99,7 @@ export const tr: HomeContent = {
       {
         value: "0",
         label: "Araştırdığımız uluslararası rakiplerin hiçbiri Türkiye'ye özel — e-Fatura, TL ya da Türk ERP'lerine göre çalışmıyor.",
-        source: "Kaynak: Tahsilet rekabet araştırması, Ağustos 2026",
+        source: "Kaynak: Tahsilet.AI rekabet araştırması, Ağustos 2026",
       },
     ],
     callout: "Türkiye'nin kurallarına göre inşa ediyoruz.",
@@ -255,7 +255,7 @@ export const tr: HomeContent = {
   audience: {
     eyebrow: "Kimler için",
     title: "Orta ölçekli ihracatçı ve imalatçı şirketler için",
-    body: "Tahsilet, ilk olarak kendi sektöründe benzer sorunları yaşayan şirketler için tasarlanıyor.",
+    body: "Tahsilet.AI, ilk olarak kendi sektöründe benzer sorunları yaşayan şirketler için tasarlanıyor.",
     items: [
       { value: "200M+ TL", label: "Yıllık ciro" },
       { value: "İhracat / İmalat", label: "Ağırlıklı B2B müşteri tabanı" },
@@ -266,12 +266,12 @@ export const tr: HomeContent = {
   integrations: {
     eyebrow: "Entegrasyonlar",
     title: "ERP / Muhasebe sistemleriyle entegre",
-    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder — ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
+    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet.AI faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder — ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {
     eyebrow: "Sık sorulanlar",
-    title: "Tahsilet'e geçmeden önce sorulanlar",
+    title: "Tahsilet.AI'a geçmeden önce sorulanlar",
     body: "Yapay zekanın müşterilerinizle sizin adınıza konuşmasına dair bilmeniz gerekenler.",
     items: [
       {
@@ -304,8 +304,8 @@ export const tr: HomeContent = {
   cta: {
     id: "contact",
     eyebrow: "Erken erişim",
-    title: "Tahsilet'i işletmenizle tanıştırın",
-    body: "Süreçlerinizi birlikte inceleyelim ve Tahsilet'in tahsilatınıza nasıl değer katacağını gösterelim. Bize ulaşın, birlikte konuşalım.",
+    title: "Tahsilet.AI'ı işletmenizle tanıştırın",
+    body: "Süreçlerinizi birlikte inceleyelim ve Tahsilet.AI'ın tahsilatınıza nasıl değer katacağını gösterelim. Bize ulaşın, birlikte konuşalım.",
     button: "E-posta ile ulaşın",
   },
   footer: {
@@ -330,7 +330,7 @@ export const tr: HomeContent = {
         ],
       },
     ],
-    rights: "Tahsilet — Tüm hakları saklıdır.",
+    rights: "Tahsilet.AI — Tüm hakları saklıdır.",
     madeIn: "Türkiye için, Türkiye'de yapıldı.",
   },
   aiLabel: { label: "Tahsilet'i yapay zekayla keşfedin", ask: "{name} ile Tahsilet'i sorun" },
