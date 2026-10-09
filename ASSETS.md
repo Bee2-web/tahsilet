@@ -136,3 +136,16 @@ Re-download: `python3 -I tools/fetch-assets.py` (it writes `analysis/assets-mani
 
 - Wordmark, AI-assistant icons and UI glyphs: converted from the reference page's inline SVG markup into React components (`src/components/icons/`).
 - Film-grain overlay: same SVG `feTurbulence` filter and keyframes as the reference embed.
+
+## Tahsilet reference logos
+
+Downloaded from each company's own website (Tahsilet's listed references). The Apesan SVG is the white
+header logo from apesan.co with its wordmark recoloured dark (#1d1d1b) for light backgrounds; the green mark is unchanged.
+
+| Local file | Source |
+|---|---|
+| `public/assets/logos/references/nalbantoglu-metal.svg` | https://nalbantal.com/wp-content/uploads/2025/02/NalbantogluLogo.svg (nalbantoglu.eu → nalbantal.com) |
+| `public/assets/logos/references/apesan.svg` | inline SVG logo on https://apesan.co/ |
+| `public/assets/logos/references/teknik-mukavva.png` | https://teknikmukavva.com/img/tklogo.png |
+| `public/assets/logos/references/ozkuruslar.png` | https://www.ozkuruslar.com.tr/Upload/images/ozk_logo2_300dpi_24201918827423.png |
+| `public/assets/logos/references/newinn.png` | https://newinn.com/wp-content/uploads/2023/06/newinn-header-logo.png |

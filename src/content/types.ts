@@ -29,6 +29,9 @@ export type TrustCard = { title: string; body: string; icon: string; tag: string
 
 export type Audience = { value: string; label: string };
 
+/** `scale` optically balances logos with built-in padding or unusual proportions (default 1). */
+export type Reference = { name: string; logo: string; url: string; scale?: number };
+
 export type Faq = { question: string; answer: string };
 
 export type HomeContent = {
@@ -60,7 +63,7 @@ export type HomeContent = {
     badges: string[];
     bubbleLines: string[];
   };
-  references: { eyebrow: string; title: string; companies: string[] };
+  references: { eyebrow: string; title: string; companies: Reference[] };
   metrics: { eyebrow: string; stats: Stat[]; callout: string };
   howItWorks: {
     id: string;

@@ -1,4 +1,5 @@
 import type { HomeContent } from "./types";
+import { referenceCompanies } from "./references";
 
 /** Turkish copy, adapted from https://tahsilet.ai/ and focused on AI-driven collections. */
 export const tr: HomeContent = {
@@ -80,7 +81,7 @@ export const tr: HomeContent = {
   references: {
     eyebrow: "Referanslarımız",
     title: "Bize güvenen şirketler",
-    companies: ["Nalbantoğlu Metal", "Apesan", "Teknik Mukavva", "Özkuruşlar Market", "NewInn"],
+    companies: referenceCompanies,
   },
   metrics: {
     eyebrow: "Neden şimdi",

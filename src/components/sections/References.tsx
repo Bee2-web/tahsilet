@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+import Image from "next/image";
 import type { HomeContent } from "@/content";
 import { StaggerReveal } from "@/components/animations/ScrollReveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -5,7 +7,7 @@ import styles from "./References.module.css";
 
 type Props = { content: Pick<HomeContent, "references"> };
 
-/** Tahsilet's reference customers as typographic logo cards (Stuut card style on a blueprint grid). */
+/** Tahsilet's reference customers as logo cards (Stuut card style on a blueprint grid). */
 export function References({ content }: Props) {
   const { references } = content;
   return (
@@ -19,9 +21,11 @@ export function References({ content }: Props) {
           <div className={styles.wrap}>
             <StaggerReveal className={styles.list} role="list">
               {references.companies.map((company) => (
-                <div key={company} className={styles.item} role="listitem">
+                <div key={company.name} className={styles.item} role="listitem">
                   <div className={styles.card}>
-                    <span className={styles.name}>{company}</span>
+                    <div className={styles.logo} style={{ "--logo-scale": company.scale ?? 1 } as CSSProperties}>
+                      <Image src={company.logo} alt={company.name} fill sizes="12rem" unoptimized className={styles.logoImg} />
+                    </div>
                   </div>
                 </div>
               ))}

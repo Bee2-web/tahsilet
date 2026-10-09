@@ -53,14 +53,16 @@
   transform: translateY(-2px);
 }
 
-.name {
-  font-family: var(--font-hn);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  text-align: center;
-  text-wrap: balance;
+/* Logo safe area inside the card; each logo is contained, so wide and tall marks balance out. */
+.logo {
+  position: relative;
+  width: 78%;
+  height: 62%;
+  transform: scale(var(--logo-scale, 1));
+}
+
+.logoImg {
+  object-fit: contain;
 }
 
 @media (max-width: 1160px) {
@@ -70,11 +72,19 @@
 }
 
 @media (max-width: 767px) {
+  /* Two per row; an odd last card is centred. */
   .list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .name {
-    font-size: 1rem;
+  .item {
+    width: calc(50% - 0.5rem);
+  }
+
+  .logo {
+    width: 80%;
+    height: 58%;
   }
 }

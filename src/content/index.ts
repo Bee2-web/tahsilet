@@ -3,12 +3,14 @@ import { tr } from "./tr";
 import type { HomeContent, Locale } from "./types";
 
 export * from "./types";
+export { referenceCompanies } from "./references";
 
 const dictionaries: Record<Locale, HomeContent> = { tr, en };
 
 export const getContent = (locale: Locale): HomeContent => dictionaries[locale];
 
 export const SITE_URL = "https://tahsilet.ai";
+
 
 /** Mascot animations (kept from the original design system). */
 export const lottie = {

@@ -1,4 +1,5 @@
 import type { HomeContent } from "./types";
+import { referenceCompanies } from "./references";
 
 /** English copy, translated from the Turkish site content. */
 export const en: HomeContent = {
@@ -80,7 +81,7 @@ export const en: HomeContent = {
   references: {
     eyebrow: "Our references",
     title: "Companies that trust us",
-    companies: ["Nalbantoğlu Metal", "Apesan", "Teknik Mukavva", "Özkuruşlar Market", "NewInn"],
+    companies: referenceCompanies,
   },
   metrics: {
     eyebrow: "Why now",
