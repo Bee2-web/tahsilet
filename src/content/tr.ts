@@ -60,9 +60,9 @@ export const tr: HomeContent = {
   },
   hero: {
     eyebrow: "Yapay zeka destekli tahsilat platformu",
-    title: "İşletme sermayenizi serbest bırakın.",
+    title: "Nakit akışınızı güvenceye alın.",
     titleAccent: "Alacaklarınız zamanında tahsil edilsin.",
-    body: "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura'yla doğrudan konuşan bir yapay zeka tahsilat platformudur. Alacaklarınızı e-posta, WhatsApp ve sesli aramayla — sizin markanız adına, sizin kurallarınızla — takip eder.",
+    body: "Tahsilet.AI, orta ölçekli Türk ihracatçı ve imalatçı şirketleri için tasarlanmış, e-Fatura ile doğrudan entegre çalışan bir yapay zeka tahsilat platformudur. Alacaklarınızı sizin markanız adına ve sizin kurallarınızla e-posta, WhatsApp ve sesli arama üzerinden takip eder.",
     secondaryCta: { label: "Nasıl Çalıştığını Gör", href: "#how-it-works" },
     emailPlaceholder: "İş e-postanız",
     emailLabel: "İş e-posta adresi",

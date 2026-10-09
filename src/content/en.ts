@@ -62,7 +62,7 @@ export const en: HomeContent = {
     eyebrow: "AI-powered collections platform",
     title: "Free up your working capital.",
     titleAccent: "Get your receivables paid on time.",
-    body: "Tahsilet.AI is an AI collections platform built for mid-sized Turkish exporters and manufacturers, speaking directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call — in your brand's name, by your rules.",
+    body: "Tahsilet.AI is an AI collections platform built for mid-sized Turkish exporters and manufacturers, connected directly to e-Invoice. It follows up on your receivables by email, WhatsApp and voice call, in your brand's name and by your rules.",
     secondaryCta: { label: "See How It Works", href: "#how-it-works" },
     emailPlaceholder: "Your work email",
     emailLabel: "Work email address",
