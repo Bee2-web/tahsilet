@@ -33,6 +33,7 @@
 
   --font-hn: var(--font-hn-face), Arial, sans-serif;
   --font-quadrant: var(--font-quadrant-face), "Times New Roman", serif;
+  --font-script: var(--font-script-face), cursive;
   --breakpoint-tab: 62rem;
 }
 

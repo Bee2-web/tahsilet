@@ -9,8 +9,8 @@
   display: flex;
   align-items: baseline;
   white-space: nowrap;
-  /* Tuned so "Tahsilet.AI" spans the full container width. */
-  font-size: 22.6cqw;
+  /* Tuned so "Tahsilet.AI" (with the script ".AI") spans the full container width. */
+  font-size: 22.35cqw;
   line-height: 0.86;
 }
 
@@ -20,11 +20,14 @@
   letter-spacing: -0.055em;
 }
 
+/* ".AI" in the script lettering of the original "Technologies" wordmark (Yellowtail, thickened with a stroke). */
 .suffix {
-  font-family: var(--font-hn);
-  font-weight: 800;
-  font-size: 0.58em;
-  letter-spacing: -0.03em;
-  margin-left: 0.04em;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: 0.66em;
+  letter-spacing: 0.01em;
+  margin-left: 0.06em;
   color: var(--color-red);
+  -webkit-text-stroke: 0.025em currentColor;
+  paint-order: stroke fill;
 }

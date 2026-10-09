@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Yellowtail } from "next/font/google";
 import { notFound } from "next/navigation";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { GrainOverlay } from "@/components/effects/GrainOverlay";
@@ -24,6 +25,9 @@ const quadrant = localFont({
   display: "swap",
   adjustFontFallback: "Times New Roman",
 });
+
+/* Script face for the ".AI" suffix — the closest match to the original "Technologies" lettering. */
+const script = Yellowtail({ weight: "400", subsets: ["latin"], variable: "--font-script-face", display: "swap" });
 
 export function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));
@@ -55,7 +59,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
 
   return (
     // suppressHydrationWarning: browser extensions (LanguageTool, ColorZilla…) add attributes to <html>/<body>.
-    <html lang={lang} className={`${hn.variable} ${quadrant.variable}`} suppressHydrationWarning>
+    <html lang={lang} className={`${hn.variable} ${quadrant.variable} ${script.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <SmoothScroll />
         {children}
