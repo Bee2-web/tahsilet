@@ -53,7 +53,13 @@
 }
 
 .question:hover {
-  color: var(--color-red);
+  color: var(--color-orange-deep);
+}
+
+.item[data-open="true"] .plus {
+  color: var(--color-white);
+  background: var(--color-orange);
+  border-color: var(--color-orange);
 }
 
 .plus {

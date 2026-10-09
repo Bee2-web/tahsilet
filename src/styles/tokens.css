@@ -13,10 +13,23 @@
   --color-beige: #e6886e;
   --color-green: #1db050;
   --color-dd-hover: #155291;
-  /* fullseam-inspired neutrals */
+  /* Accent orange: sits between the brand red and yellow. Use sparingly. */
+  --color-orange: #f47b20;
+  --color-orange-soft: #fde6d3;
+  /* Orange dark enough for small text on light surfaces (AA). */
+  --color-orange-deep: #b4520c;
+  --color-yellow-soft: #f8f9c4;
+  /* fullseam-inspired surfaces, tinted into the brand palette */
   --color-paper: #f6f4ef;
   --color-paper-deep: #efece4;
-  --color-ink: #16130f;
+  /* Deep brand navy (from --color-blue) for dark panels instead of neutral black. */
+  --color-navy: #0c3463;
+  --color-navy-deep: #082648;
+  /* Text tones for product mocks: blue-tinted instead of neutral grey. */
+  --color-ink: #0d2a4d;
+  --color-ink-muted: #5d7594;
+  --color-line-soft: #e3ebf5;
+  --color-blue-tint: #e8f1fb;
 
   --font-hn: var(--font-hn-face), Arial, sans-serif;
   --font-quadrant: var(--font-quadrant-face), "Times New Roman", serif;

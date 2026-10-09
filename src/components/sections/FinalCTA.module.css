@@ -15,25 +15,25 @@
   border-radius: 1.5rem;
   color: var(--color-grey);
   background:
-    radial-gradient(120% 90% at 50% 0%, rgb(47 133 219 / 0.35), transparent 60%),
+    radial-gradient(90% 70% at 50% 0%, rgb(47 133 219 / 0.45), transparent 60%),
     linear-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgb(255 255 255 / 0.06) 1px, transparent 1px),
-    var(--color-ink);
+    linear-gradient(180deg, var(--color-navy), var(--color-navy-deep));
   background-size:
     auto,
     2.9rem 2.9rem,
     2.9rem 2.9rem,
     auto;
-  box-shadow: 0 40px 80px -40px rgb(10 22 40 / 0.55);
+  box-shadow: 0 40px 80px -40px rgb(8 38 72 / 0.6);
 }
 
-/* Thin red rule across the top edge (Stuut accent). */
+/* Red → orange → yellow rule across the top edge. */
 .panel::before {
   content: "";
   position: absolute;
   inset: 0 0 auto;
   height: 6px;
-  background: var(--color-red);
+  background: linear-gradient(90deg, var(--color-red), var(--color-orange) 55%, var(--color-yellow));
 }
 
 .eyebrow {
@@ -70,8 +70,8 @@
 }
 
 .email:hover {
-  color: var(--color-yellow);
-  border-bottom-color: var(--color-yellow);
+  color: var(--color-orange);
+  border-bottom-color: var(--color-orange);
 }
 
 @media (max-width: 991px) {

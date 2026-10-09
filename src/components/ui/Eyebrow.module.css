@@ -13,10 +13,10 @@
   color: var(--color-white);
 }
 
-/* Square marker (fullseam) in the brand colour (Stuut). */
+/* Square marker (fullseam) in the accent orange. */
 .dot {
   aspect-ratio: 1;
-  background-color: currentColor;
+  background-color: var(--color-orange);
   border-radius: 1px;
   flex: none;
   width: 0.45rem;

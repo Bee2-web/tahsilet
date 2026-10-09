@@ -35,7 +35,12 @@
 }
 
 .cell:hover {
-  background: var(--color-yellow);
+  background: var(--color-orange-soft);
+}
+
+.cell:hover .index {
+  color: var(--color-orange-deep);
+  opacity: 1;
 }
 
 .index {

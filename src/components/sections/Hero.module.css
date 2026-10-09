@@ -52,6 +52,10 @@
   z-index: 0;
 }
 
+.arcs line {
+  stroke: rgb(244 123 32 / 0.45);
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -71,7 +75,7 @@
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 1px;
-  background: var(--color-red);
+  background: var(--color-orange);
   flex: none;
 }
 
@@ -118,8 +122,8 @@
   width: 1.05rem;
   height: 1.05rem;
   border-radius: 3px;
-  background: var(--color-blue);
-  color: var(--color-yellow);
+  background: var(--color-orange);
+  color: var(--color-white);
   font-size: 0.65rem;
 }
 
