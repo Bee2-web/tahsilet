@@ -117,17 +117,28 @@
   display: flex;
   position: relative;
   color: var(--color-blue);
-  transform: translateY(-8rem);
-  transition:
-    transform 0.4s var(--ease-ease-in-out),
-    opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.navbar[data-solid="true"] .brand {
+/* Logo drop: "Tahsilet" falls in first, ".AI" follows; on the way out ".AI" leaves first. */
+.brand [data-part] {
+  display: inline-block;
+  transform: translateY(-8rem);
+  transition: transform 0.4s var(--ease-ease-in-out);
+}
+
+.brand [data-part="name"] {
+  transition-delay: 0.08s;
+}
+
+.navbar[data-solid="true"] .brand [data-part] {
   transform: translateY(0);
+  transition: transform 0.55s var(--ease-out-cubic);
+}
+
+.navbar[data-solid="true"] .brand [data-part="suffix"] {
   transition:
-    transform 0.5s var(--ease-out-cubic),
-    opacity 0.3s ease;
+    transform 0.6s var(--ease-back-out) 0.22s;
 }
 
 .logo {

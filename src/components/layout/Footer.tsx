@@ -41,7 +41,7 @@ export function Footer({ content }: Props) {
             </div>
           </nav>
           <Link href="#hero" className={styles.logoLink} aria-label={brand.homeLabel}>
-            <BrandWordmark name={brand.name} suffix={brand.suffix} label={brand.homeLabel} />
+            <BrandWordmark name={brand.name} label={brand.homeLabel} />
           </Link>
           <div className={styles.copyright}>
             <div className={`${styles.copyrightTxt} ${styles.small}`}>

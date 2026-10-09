@@ -26,11 +26,11 @@
     hero-tilt-logo 1s var(--ease-out-cubic) both;
 }
 
-/* Wordmark spans ~4/5 of the row, leaving the top-right corner to the hairline arcs. */
+/* Wordmark spans ~2/3 of the row, leaving the top-right corner to the hairline arcs. */
 .logo {
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 67%;
   display: flex;
 }
 
@@ -296,7 +296,7 @@
 
 @media (max-width: 991px) {
   .logo {
-    width: 100%;
+    width: 84%;
   }
 
   .title {
