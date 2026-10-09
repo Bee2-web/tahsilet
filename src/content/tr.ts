@@ -258,7 +258,7 @@ export const tr: HomeContent = {
   integrations: {
     eyebrow: "Entegrasyonlar",
     title: "ERP / Muhasebe sistemleriyle entegre",
-    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet.AI faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder — ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
+    body: "Hangi muhasebe ya da ERP yazılımını kullanıyorsanız kullanın, Tahsilet.AI faturalarınızı ve tahsilat verilerinizi tek tıkla senkronize eder, ekstra bir IT projesine ya da veri aktarımına gerek kalmadan.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {

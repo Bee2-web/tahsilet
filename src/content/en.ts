@@ -258,7 +258,7 @@ export const en: HomeContent = {
   integrations: {
     eyebrow: "Integrations",
     title: "Integrated with your ERP and accounting systems",
-    body: "Whatever accounting or ERP software you use, Tahsilet.AI syncs your invoices and collection data in one click — no extra IT project or data migration required.",
+    body: "Whatever accounting or ERP software you use, Tahsilet.AI syncs your invoices and collection data in one click no extra IT project or data migration required.",
     systems: ["SAP", "Logo", "Mikro", "Uyumsoft", "Netsis", "Luca", "Dia", "Canias", "Rota", "Nebim"],
   },
   faq: {
