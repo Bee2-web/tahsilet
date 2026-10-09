@@ -54,8 +54,9 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!isLocale(lang)) notFound();
 
   return (
-    <html lang={lang} className={`${hn.variable} ${quadrant.variable}`}>
-      <body>
+    // suppressHydrationWarning: browser extensions (LanguageTool, ColorZilla…) add attributes to <html>/<body>.
+    <html lang={lang} className={`${hn.variable} ${quadrant.variable}`} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <SmoothScroll />
         {children}
         <GrainOverlay />

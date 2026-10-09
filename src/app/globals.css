@@ -221,6 +221,11 @@ html.lenis body {
     z-index: 1;
   }
 
+  /* Keep content off the frame lines. */
+  .blueprint .page-container {
+    padding-inline: clamp(1.25rem, 3vw, 3rem);
+  }
+
   .blueprint.on-dark {
     border-top-color: var(--hair-light);
   }
