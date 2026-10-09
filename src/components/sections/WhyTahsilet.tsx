@@ -1,20 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { differentiation } from "@/content/home";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import type { HomeContent } from "@/content";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { LottiePlayer } from "@/components/animations/LottiePlayer";
-import styles from "./Differentiation.module.css";
+import { EInvoiceMock, VoiceMock, WhatsAppMock } from "./WhyMocks";
+import styles from "./WhyTahsilet.module.css";
+
+type Props = { content: Pick<HomeContent, "why"> };
 
 /**
- * Sticky media + scrolling steps. Ported from the reference's two "how it works" observers:
- * a step becomes active inside the 60–65% viewport band (others fade to .25) and the matching
- * Lottie pane cross-fades in (.5s); a second, centred band (45–55%) also drives the media pane.
+ * Sticky media + scrolling steps. A step becomes active inside the 60–65% viewport band (others fade
+ * to .25) and the matching product mock cross-fades in; a centred 45–55% band also drives the pane.
  */
-export function Differentiation() {
+export function WhyTahsilet({ content }: Props) {
+  const { why } = content;
   const rootRef = useRef<HTMLElement>(null);
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [activePane, setActivePane] = useState(0);
+
+  const mocks: ReactNode[] = [
+    <EInvoiceMock key="einvoice" data={why.mocks.einvoice} />,
+    <WhatsAppMock key="whatsapp" data={why.mocks.whatsapp} />,
+    <VoiceMock key="voice" data={why.mocks.voice} />,
+  ];
 
   useEffect(() => {
     const steps = rootRef.current?.querySelectorAll<HTMLElement>("[data-step]");
@@ -50,41 +58,40 @@ export function Differentiation() {
   }, []);
 
   return (
-    <section ref={rootRef} className={`section bg-blue-grid ${styles.section}`} aria-labelledby="different-title">
+    <section ref={rootRef} id={why.id} className={`section bg-blue-grid ${styles.section}`} aria-labelledby="why-title">
       <div className={styles.padding}>
         <div className={`page-container ${styles.copy}`}>
           <Eyebrow tone="white" strong>
-            {differentiation.eyebrow}
+            {why.eyebrow}
           </Eyebrow>
           <div className={styles.titleRow}>
-            <h3 id="different-title" className={`h-x-large ${styles.title}`}>
-              {differentiation.title[0]}
-              <br />
-              {differentiation.title[1]}
-            </h3>
+            <h2 id="why-title" className={`section-title ${styles.title}`}>
+              {why.title}
+            </h2>
+            <p className={`section-lede ${styles.lede}`}>{why.body}</p>
           </div>
 
           <div className={styles.split}>
             <div className={styles.media} aria-hidden="true">
-              {differentiation.steps.map((step, index) => (
-                <div key={step.title} className={styles.pane} data-active={activePane === index}>
-                  <div className={styles.frame}>
-                    <LottiePlayer src={step.lottie} lazy className={styles.lottie} />
+              {mocks.map((mock, index) => (
+                <div key={index} className={styles.pane} data-active={activePane === index}>
+                  {/* Re-keying on activation replays the mock's entrance animation. */}
+                  <div key={activePane === index ? "active" : "idle"} className={styles.frame}>
+                    {mock}
                   </div>
                 </div>
               ))}
             </div>
 
             <div className={styles.content}>
-              {differentiation.steps.map((step, index) => (
+              {why.steps.map((step, index) => (
                 <div key={step.title}>
                   <div className={styles.mediaCopy} aria-hidden="true">
-                    <div className={styles.frame}>
-                      <LottiePlayer src={step.lottie} lazy className={styles.lottie} />
-                    </div>
+                    <div className={styles.frame}>{mocks[index]}</div>
                   </div>
                   <div data-step={index} className={styles.step} data-active={activeStep === index}>
                     <div className={styles.stepInner}>
+                      <span className={styles.stepNumber}>{String(index + 1).padStart(2, "0")}</span>
                       <h3 className="h-x-large">{step.title}</h3>
                       <p className={`txt-medium ${styles.stepBody}`}>{step.body}</p>
                     </div>

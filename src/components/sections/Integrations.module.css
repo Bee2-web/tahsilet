@@ -1,11 +1,16 @@
 .section {
-  background-color: var(--color-grey);
+  background-color: var(--color-paper);
+}
+
+.eyebrow {
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 .titleWrap {
   width: 100%;
   max-width: 60rem;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
 }
 
 .title {
@@ -13,55 +18,56 @@
 }
 
 .wrap {
-  /* Accounts for the reference's empty embed element (one extra column gap). */
-  margin-top: var(--gutter-s);
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: center;
+  margin-top: 2.5rem;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .list {
-  gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  max-width: 64rem;
   display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--hair-strong);
+  border-left: 1px solid var(--hair-strong);
 }
 
 .item {
-  justify-content: center;
-  align-items: center;
-  max-width: 15rem;
-  display: flex;
+  display: grid;
+  place-items: center;
+  min-height: 7rem;
+  padding: 1rem;
+  border-right: 1px solid var(--hair-strong);
+  border-bottom: 1px solid var(--hair-strong);
+  background: rgb(255 255 255 / 0.4);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.card {
-  padding: 0.5rem;
+.item:hover {
+  background: var(--color-blue);
+  color: var(--color-yellow);
 }
 
-.img {
-  width: 100%;
-  height: auto;
-  display: block;
+.name {
+  font-family: var(--font-hn);
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
 }
 
 @media (max-width: 767px) {
   .list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .item {
-    width: 100%;
-    max-width: 12rem;
+    min-height: 5rem;
   }
 
-  .card {
-    padding: 0.35rem;
-  }
-}
-
-@media (max-width: 479px) {
-  .card {
-    padding: 0;
+  .name {
+    font-size: 1.3rem;
   }
 }

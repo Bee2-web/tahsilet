@@ -1,21 +1,32 @@
-import { finalCta } from "@/content/home";
+import { mailtoHref, type HomeContent } from "@/content";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ButtonLink } from "@/components/ui/Button";
 import styles from "./FinalCTA.module.css";
 
-export function FinalCTA() {
+type Props = { content: Pick<HomeContent, "cta" | "contactEmail" | "locale"> };
+
+/** Closing call-to-action: dark blueprint panel (fullseam) with the XL yellow button (Stuut). */
+export function FinalCTA({ content }: Props) {
+  const { cta } = content;
   return (
-    <section className={`section ${styles.section}`} aria-labelledby="cta-title">
+    <section id={cta.id} className={`section blueprint ${styles.section}`} aria-labelledby="cta-title">
       <div className="section-padding">
-        <div className="page-container container-center-text">
-          <div className={styles.titleWrap}>
+        <div className="page-container">
+          <div className={styles.panel}>
+            <Eyebrow tone="white" className={styles.eyebrow}>
+              {cta.eyebrow}
+            </Eyebrow>
             <h2 id="cta-title" className={styles.title}>
-              {finalCta.title}
+              {cta.title}
             </h2>
+            <p className={styles.body}>{cta.body}</p>
+            <ButtonLink href={mailtoHref(content)} size="xl">
+              <div>{cta.button}</div>
+            </ButtonLink>
+            <a className={styles.email} href={`mailto:${content.contactEmail}`}>
+              {content.contactEmail}
+            </a>
           </div>
-          <p className="txt-medium">{finalCta.body}</p>
-          <ButtonLink href={finalCta.button.href} size="xl">
-            <div>{finalCta.button.label}</div>
-          </ButtonLink>
         </div>
       </div>
     </section>

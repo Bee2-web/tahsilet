@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { capabilities, type Capability } from "@/content/home";
+import type { Capability, HomeContent } from "@/content";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { CaseStudyLabel } from "@/components/ui/CaseStudyLabel";
 import { gsap, useGSAP } from "@/lib/gsap";
 import { EASE, OFFER_CARD } from "@/lib/animations";
 import styles from "./ProductCapabilities.module.css";
@@ -36,17 +35,18 @@ function animateCard(overlay: HTMLElement | null, show: boolean) {
 }
 
 function CapabilityPill({ item }: { item: Capability }) {
-  const label = <div>{item.title}</div>;
-  return item.href ? (
-    <a href={item.href} className={styles.button}>
-      {label}
-    </a>
-  ) : (
-    <div className={styles.button}>{label}</div>
+  return (
+    <div className={styles.button}>
+      <div>{item.title}</div>
+      <span className="sr-only-focusable">{item.description}</span>
+    </div>
   );
 }
 
-export function ProductCapabilities() {
+type Props = { content: Pick<HomeContent, "capabilities"> };
+
+export function ProductCapabilities({ content }: Props) {
+  const { capabilities } = content;
   const rootRef = useRef<HTMLElement>(null);
   const [hovered, setHovered] = useState<number | null>(null);
 
@@ -84,7 +84,12 @@ export function ProductCapabilities() {
   );
 
   return (
-    <section ref={rootRef} className={`section ${styles.section}`} aria-label="Capabilities">
+    <section
+      ref={rootRef}
+      id={capabilities.id}
+      className={`section blueprint ${styles.section}`}
+      aria-label={capabilities.eyebrow}
+    >
       <div className="section-padding">
         <div className="page-container">
           <Eyebrow>{capabilities.eyebrow}</Eyebrow>
@@ -111,7 +116,6 @@ export function ProductCapabilities() {
                       <p>{item.description}</p>
                     </div>
                   </div>
-                  {item.comingSoon && <CaseStudyLabel className={styles.comingSoon}>Coming soon</CaseStudyLabel>}
                 </div>
               ))}
             </div>

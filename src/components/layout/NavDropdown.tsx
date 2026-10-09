@@ -1,7 +1,7 @@
 "use client";
 
 import { useId } from "react";
-import type { DropdownItem, NavDropdown as NavDropdownData } from "@/content/home";
+import type { DropdownItem, NavDropdownData } from "@/content";
 import { ChevronIcon } from "@/components/icons/UiIcons";
 import headerStyles from "./Header.module.css";
 import styles from "./NavDropdown.module.css";
@@ -12,9 +12,11 @@ type Props = {
   onOpenChange: (open: boolean) => void;
   /** Desktop dropdowns open on hover (Webflow `data-hover="true"`); tablet/mobile toggle on tap. */
   hoverEnabled: boolean;
+  /** Called when a link inside the panel is followed (closes the mobile menu). */
+  onNavigate?: () => void;
 };
 
-function DropdownLink({ item }: { item: DropdownItem }) {
+function DropdownLink({ item, onNavigate }: { item: DropdownItem; onNavigate?: () => void }) {
   const inner = (
     <>
       <span className={`${styles.icon} ${item.comingSoon ? styles.comingSoonIcon : ""}`}>
@@ -32,7 +34,7 @@ function DropdownLink({ item }: { item: DropdownItem }) {
   );
 
   return item.href ? (
-    <a href={item.href} className={styles.link}>
+    <a href={item.href} className={styles.link} onClick={onNavigate}>
       {inner}
     </a>
   ) : (
@@ -42,7 +44,7 @@ function DropdownLink({ item }: { item: DropdownItem }) {
   );
 }
 
-export function NavDropdown({ data, open, onOpenChange, hoverEnabled }: Props) {
+export function NavDropdown({ data, open, onOpenChange, hoverEnabled, onNavigate }: Props) {
   const listId = useId();
 
   return (
@@ -75,7 +77,14 @@ export function NavDropdown({ data, open, onOpenChange, hoverEnabled }: Props) {
           {data.columns.map((column, index) => (
             <div key={index} className={styles.column}>
               {column.map((item) => (
-                <DropdownLink key={item.label} item={item} />
+                <DropdownLink
+                  key={item.label}
+                  item={item}
+                  onNavigate={() => {
+                    onOpenChange(false);
+                    onNavigate?.();
+                  }}
+                />
               ))}
             </div>
           ))}

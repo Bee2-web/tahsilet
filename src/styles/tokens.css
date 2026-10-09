@@ -13,6 +13,10 @@
   --color-beige: #e6886e;
   --color-green: #1db050;
   --color-dd-hover: #155291;
+  /* fullseam-inspired neutrals */
+  --color-paper: #f6f4ef;
+  --color-paper-deep: #efece4;
+  --color-ink: #16130f;
 
   --font-hn: var(--font-hn-face), Arial, sans-serif;
   --font-quadrant: var(--font-quadrant-face), "Times New Roman", serif;
@@ -46,6 +50,11 @@
   --ease-menu: cubic-bezier(0.444, 0.014, 0.117, 1.002);
 
   --grid-bg: url("/assets/images/blue-grid.svg");
+  /* Blueprint hairlines */
+  --hair: rgb(22 101 181 / 0.14);
+  --hair-strong: rgb(22 101 181 / 0.28);
+  --hair-light: rgb(255 255 255 / 0.16);
+  --shadow-card: 0 1px 0 rgb(22 101 181 / 0.06), 0 12px 32px -18px rgb(22 25 40 / 0.35);
 }
 
 /* Spacing scale steps down per breakpoint (Webflow variable modes). */

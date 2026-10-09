@@ -1,0 +1,30 @@
+.wrap {
+  container-type: inline-size;
+  display: block;
+  width: 100%;
+  color: currentColor;
+}
+
+.mark {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  /* Tuned so "Tahsilet.AI" spans the full container width. */
+  font-size: 22.6cqw;
+  line-height: 0.86;
+}
+
+.name {
+  font-family: var(--font-quadrant);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.suffix {
+  font-family: var(--font-hn);
+  font-weight: 800;
+  font-size: 0.58em;
+  letter-spacing: -0.03em;
+  margin-left: 0.04em;
+  color: var(--color-red);
+}

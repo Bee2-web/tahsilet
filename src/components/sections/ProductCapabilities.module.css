@@ -1,6 +1,6 @@
 .section {
   z-index: 5;
-  background-color: var(--color-grey);
+  background-color: var(--color-paper);
 }
 
 .wrap {
@@ -114,7 +114,4 @@
     font-size: 2rem;
   }
 
-  .item .comingSoon {
-    margin-right: 1rem;
-  }
 }

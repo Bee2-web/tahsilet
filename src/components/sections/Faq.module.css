@@ -1,0 +1,131 @@
+.section {
+  background-color: var(--color-paper);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 3rem 5rem;
+  align-items: start;
+}
+
+.intro {
+  position: sticky;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.intro > :first-child {
+  margin-bottom: 0;
+}
+
+.list {
+  border-top: 1px solid var(--hair-strong);
+}
+
+.item {
+  border-bottom: 1px solid var(--hair-strong);
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+}
+
+.question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  background: none;
+  border: 0;
+  color: var(--color-blue);
+  text-align: left;
+  font-family: var(--font-hn);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.question:hover {
+  color: var(--color-red);
+}
+
+.plus {
+  position: relative;
+  flex: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.plus::before,
+.plus::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 0.7rem;
+  height: 1.5px;
+  background: currentColor;
+  translate: -50% -50%;
+  transition: rotate 0.35s var(--ease-out-cubic);
+}
+
+.plus::after {
+  rotate: 90deg;
+}
+
+.item[data-open="true"] .plus::after {
+  rotate: 0deg;
+}
+
+/* Height animates with grid-template-rows 0fr → 1fr. */
+.panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--ease-out-cubic);
+}
+
+.item[data-open="true"] .panel {
+  grid-template-rows: 1fr;
+}
+
+.panelInner {
+  overflow: hidden;
+}
+
+.panelInner p {
+  margin: 0;
+  padding: 0 3rem 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .question {
+    font-size: 1.05rem;
+    padding: 1.2rem 0;
+  }
+
+  .panelInner p {
+    padding-right: 0;
+    font-size: 1rem;
+  }
+}

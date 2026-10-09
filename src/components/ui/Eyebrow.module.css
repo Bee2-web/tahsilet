@@ -13,19 +13,21 @@
   color: var(--color-white);
 }
 
+/* Square marker (fullseam) in the brand colour (Stuut). */
 .dot {
   aspect-ratio: 1;
   background-color: currentColor;
-  border-radius: 50%;
+  border-radius: 1px;
   flex: none;
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.45rem;
+  height: 0.45rem;
 }
 
 .text {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
+  letter-spacing: 0.08em;
   line-height: 1.15;
 }
 
@@ -44,7 +46,7 @@
   }
 
   .text {
-    font-size: 0.9rem;
+    font-size: 0.78rem;
   }
 }
 
@@ -54,6 +56,6 @@
   }
 
   .text {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
   }
 }

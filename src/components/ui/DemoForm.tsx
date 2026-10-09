@@ -1,62 +1,52 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { isBlockedEmail, submitDemoRequest, WORK_EMAIL_MESSAGE } from "@/lib/forms";
+import { mailtoHref, type HomeContent } from "@/content";
+import { isBlockedEmail } from "@/lib/forms";
 import { buttonClass } from "./Button";
 import styles from "./DemoForm.module.css";
 
-type Props = { placeholder: string; submitLabel: string; submittingLabel: string };
+type Props = { content: Pick<HomeContent, "hero" | "contactEmail" | "locale"> };
 
-type Status = { kind: "idle" } | { kind: "submitting" } | { kind: "error"; message: string };
+/**
+ * Hero demo request. Validates a work email (consumer domains rejected), then opens a pre-filled email
+ * to the Tahsilet contact address — no backend required. Swap `submitDemoRequest` in lib/forms.ts for a
+ * CRM/API call when one exists.
+ */
+export function DemoForm({ content }: Props) {
+  const { hero } = content;
+  const [sent, setSent] = useState(false);
 
-/** Hero email-capture form with the reference's work-email validation. Submission is a documented placeholder. */
-export function DemoForm({ placeholder, submitLabel, submittingLabel }: Props) {
-  const [status, setStatus] = useState<Status>({ kind: "idle" });
-
-  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
     const input = form.elements.namedItem("email") as HTMLInputElement;
-    input.setCustomValidity(isBlockedEmail(input.value) ? WORK_EMAIL_MESSAGE : "");
+    input.setCustomValidity(isBlockedEmail(input.value) ? hero.blockedEmailMessage : "");
     if (!form.reportValidity()) return;
-
-    setStatus({ kind: "submitting" });
-    const result = await submitDemoRequest(input.value);
-    setStatus(
-      result.ok
-        ? { kind: "idle" }
-        : {
-            kind: "error",
-            message:
-              result.reason === "not-connected"
-                ? "This form isn’t connected to a backend yet, so your request was not sent."
-                : "Something went wrong. Please try again.",
-          },
-    );
+    window.location.href = mailtoHref(content, input.value.trim());
+    setSent(true);
   };
 
   return (
     <div className={styles.demoForm}>
-      <form className={styles.content} onSubmit={onSubmit} noValidate={false} aria-label="Request a demo">
+      <form className={styles.content} onSubmit={onSubmit} aria-label={hero.formLabel}>
         <input
           className={styles.field}
           name="email"
           type="email"
-          placeholder={placeholder}
-          aria-label="Work email"
+          placeholder={hero.emailPlaceholder}
+          aria-label={hero.emailLabel}
           autoComplete="email"
           required
           onInput={(event) => event.currentTarget.setCustomValidity("")}
         />
-        <button type="submit" className={buttonClass("blue", "default", styles.submit)} disabled={status.kind === "submitting"}>
-          {status.kind === "submitting" ? submittingLabel : submitLabel}
+        <button type="submit" className={buttonClass("blue", "default", styles.submit)}>
+          {hero.submitLabel}
         </button>
-        {/* Matches the reference's Turnstile slot, which adds one flex gap. */}
-        <div aria-hidden="true" />
       </form>
-      {status.kind === "error" && (
-        <p className={styles.error} role="status">
-          {status.message}
+      {sent && (
+        <p className={styles.notice} role="status">
+          {hero.mailtoOpened} <a href={`mailto:${content.contactEmail}`}>{content.contactEmail}</a>
         </p>
       )}
     </div>

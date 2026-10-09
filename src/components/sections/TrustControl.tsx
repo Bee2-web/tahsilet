@@ -1,20 +1,22 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
-import { testimonials } from "@/content/home";
+import type { HomeContent } from "@/content";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/components/icons/UiIcons";
 import { Draggable, gsap, useGSAP } from "@/lib/gsap";
 import { EASE, SLIDER } from "@/lib/animations";
-import styles from "./Testimonials.module.css";
+import styles from "./TrustControl.module.css";
 
-export function Testimonials() {
+type Props = { content: Pick<HomeContent, "trust"> };
+
+export function TrustControl({ content }: Props) {
+  const { trust } = content;
   const rootRef = useRef<HTMLElement>(null);
   const controls = useRef<{ prev: () => void; next: () => void }>({ prev: () => {}, next: () => {} });
 
-  // Port of the reference's "Overlapping Slider": the list is dragged/thrown with inertia and snaps per card;
-  // cards that scroll past the left edge stay pinned, shrink to 45% and tilt -8° around 75% / centre.
+  // Overlapping slider: the list is dragged/thrown with inertia and snaps per card; cards that scroll
+  // past the left edge stay pinned, shrink to 45% and tilt -8° around 75% / centre.
   useGSAP(
     () => {
       const root = rootRef.current;
@@ -94,7 +96,7 @@ export function Testimonials() {
             update();
           },
         });
-        wrap.setAttribute("aria-label", `Slide ${currentIndex + 1} of ${slides.length}`);
+        wrap.setAttribute("aria-label", `${trust.carouselLabel} — ${currentIndex + 1} / ${slides.length}`);
       };
 
       controls.current = {
@@ -161,40 +163,47 @@ export function Testimonials() {
   );
 
   return (
-    <section ref={rootRef} className={`section bg-blue-grid ${styles.section}`} aria-labelledby="receipts-title">
+    <section ref={rootRef} id={trust.id} className={`section bg-blue-grid ${styles.section}`} aria-labelledby="trust-title">
       <div className="section-padding">
         <div className="page-container">
-          <Eyebrow tone="white">
-            <span id="receipts-title">{testimonials.eyebrow}</span>
-          </Eyebrow>
-          <div className={styles.arrows}>
-            <button type="button" className={styles.arrow} aria-label="Previous testimonial" onClick={() => controls.current.prev()}>
-              <ArrowLeftIcon />
-            </button>
-            <button type="button" className={styles.arrow} aria-label="Next testimonial" onClick={() => controls.current.next()}>
-              <ArrowRightIcon />
-            </button>
+          <div className={styles.header}>
+            <div>
+              <Eyebrow tone="white">{trust.eyebrow}</Eyebrow>
+              <h2 id="trust-title" className="section-title">
+                {trust.title}
+              </h2>
+            </div>
+            <p className={`section-lede ${styles.lede}`}>{trust.body}</p>
+          </div>
+          <div className={styles.toolbar}>
+            <div className={styles.arrows}>
+              <button type="button" className={styles.arrow} aria-label={trust.prev} onClick={() => controls.current.prev()}>
+                <ArrowLeftIcon />
+              </button>
+              <button type="button" className={styles.arrow} aria-label={trust.next} onClick={() => controls.current.next()}>
+                <ArrowRightIcon />
+              </button>
+            </div>
           </div>
           <div className={styles.wrap}>
-            <div className={styles.collection} role="region" aria-roledescription="carousel" aria-label="Testimonial slider">
+            <div className={styles.collection} role="region" aria-roledescription="carousel" aria-label={trust.carouselLabel}>
               <div className={styles.list} role="list">
-                {testimonials.items.map((item) => (
-                  <div key={item.name} className={styles.item} role="listitem">
-                    <figure className={styles.card}>
-                      <div className={styles.logo}>
-                        <Image src={item.logo} alt="" width={735} height={340} unoptimized draggable={false} />
+                {trust.cards.map((card, index) => (
+                  <div key={card.title} className={styles.item} role="listitem">
+                    <article className={styles.card}>
+                      <div className={styles.cardTop}>
+                        <div className={styles.icon}>
+                          {/* eslint-disable-next-line @next/next/no-img-element -- decorative SVG icon */}
+                          <img src={card.icon} alt="" width={64} height={64} draggable={false} />
+                        </div>
+                        <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
                       </div>
-                      <blockquote className={styles.quote}>{item.quote}</blockquote>
-                      <figcaption className={styles.person}>
-                        <div className={styles.photo}>
-                          <Image src={item.photo} alt={item.name} width={112} height={112} unoptimized draggable={false} />
-                        </div>
-                        <div className={styles.names}>
-                          <div className={styles.name}>{item.name}</div>
-                          <div className={styles.role}>{item.role}</div>
-                        </div>
-                      </figcaption>
-                    </figure>
+                      <h3 className={styles.cardTitle}>{card.title}</h3>
+                      <p className={styles.body}>{card.body}</p>
+                      <div className={styles.footer}>
+                        <span className={styles.tag}>{card.tag}</span>
+                      </div>
+                    </article>
                   </div>
                 ))}
               </div>

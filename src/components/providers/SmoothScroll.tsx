@@ -27,7 +27,13 @@ export function SmoothScroll() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 0.7, gestureOrientation: "vertical" });
+    const lenis = new Lenis({
+      lerp: 0.1,
+      wheelMultiplier: 0.7,
+      gestureOrientation: "vertical",
+      // In-page anchors (#how-it-works…) glide to their section, clearing the fixed header.
+      anchors: { offset: -80 },
+    });
     setLenis(lenis);
     lenis.on("scroll", ScrollTrigger.update);
     const tick = (time: number) => lenis.raf(time * 1000);

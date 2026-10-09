@@ -1,37 +1,102 @@
 .section {
-  background-color: var(--color-red);
-  color: var(--color-grey);
+  background-color: var(--color-paper);
 }
 
-.titleWrap {
-  margin: 0 0 2rem;
+.panel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 6rem 2rem;
+  border-radius: 1.5rem;
+  color: var(--color-grey);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgb(47 133 219 / 0.35), transparent 60%),
+    linear-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.06) 1px, transparent 1px),
+    var(--color-ink);
+  background-size:
+    auto,
+    2.9rem 2.9rem,
+    2.9rem 2.9rem,
+    auto;
+  box-shadow: 0 40px 80px -40px rgb(10 22 40 / 0.55);
+}
+
+/* Thin red rule across the top edge (Stuut accent). */
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background: var(--color-red);
+}
+
+.eyebrow {
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 .title {
+  max-width: 56rem;
+  margin: 0;
   letter-spacing: -0.02em;
   text-wrap: balance;
   font-family: var(--font-hn);
   font-size: 5rem;
   font-weight: 800;
-  line-height: 0.9;
+  line-height: 0.95;
+  color: var(--color-white);
+}
+
+.body {
+  max-width: 36rem;
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: rgb(255 255 255 / 0.78);
+}
+
+.email {
+  font-family: var(--font-hn);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  color: rgb(255 255 255 / 0.65);
+  border-bottom: 1px solid rgb(255 255 255 / 0.3);
+}
+
+.email:hover {
+  color: var(--color-yellow);
+  border-bottom-color: var(--color-yellow);
 }
 
 @media (max-width: 991px) {
   .title {
-    letter-spacing: -0.01em;
-    font-size: 4.25rem;
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 767px) {
+  .panel {
+    padding: 4rem 1.25rem;
+    border-radius: 1rem;
+  }
+
   .title {
-    font-size: 3.3rem;
+    font-size: 2.8rem;
+  }
+
+  .body {
+    font-size: 1.05rem;
   }
 }
 
 @media (max-width: 479px) {
   .title {
-    letter-spacing: 0;
-    font-size: 2.8rem;
+    font-size: 2.3rem;
   }
 }
